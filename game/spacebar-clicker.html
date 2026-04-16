@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacebar Clicker - Clicker | MysteryGames</title>
+  <meta name="description" content="Try not to wear out your spacebar in Spacebar Clicker! This addictive clicker game challenges you to smash the space key relentlessly to earn points. Spend...">
+  <link rel="canonical" href="https://mysterygames.org/game/spacebar-clicker.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Spacebar Clicker - Free Online Game">
+  <meta property="og:description" content="Try not to wear out your spacebar in Spacebar Clicker! This addictive clicker game challenges you to smash the space key relentlessly to earn points. Spend...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/684/Spacebar-Clicker.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Spacebar Clicker",
+    "description": "Try not to wear out your spacebar in Spacebar Clicker! This addictive clicker game challenges you to smash the space key relentlessly to earn points. Spend them on hilarious boosters like Monkeys and ",
+    "image": "https://www.onlinegames.io/media/posts/684/Spacebar-Clicker.jpg",
+    "url": "https://mysterygames.org/game/spacebar-clicker.html",
+    "genre": "Clicker",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Clicker" class="hover:text-blue-600">Clicker</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Spacebar Clicker</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://www.onlinegames.io/games/2024/more/spacebar-clicker/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/684/Spacebar-Clicker.jpg" alt="Spacebar Clicker" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Clicker</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Spacebar Clicker</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px">Try not to wear out your spacebar in <strong style="color:#ff6b00">Spacebar Clicker</strong>! This addictive <a href="https://www.onlinegames.io/t/clicker/" style="color:#0066cc;text-decoration:none">clicker game</a> challenges you to smash the space key relentlessly to earn points. Spend them on hilarious boosters like <span style="font-weight:bold;color:#8a2be2">Monkeys</span> and <span style="font-weight:bold;color:#ff1493">Boomer Moms</span> to automate your gains! 🚀</p><h2 style="color:#ff6b00;font-size:22px;margin:20px 0 10px">About Spacebar Clicker</h2><p style="margin:0 0 15px">A giant cream-colored spacebar dominates your screen - your mission? <span style="font-weight:bold">Click it into oblivion!</span> Each tap earns +1 point, which unlocks game-changing boosters. Pro tip: <span style="background-color:#fffacd">double your output</span> by using both on-screen and physical spacebars simultaneously!</p><h3 style="color:#ff6b00;font-size:18px;margin:15px 0 10px">Meet Your Booster Squad</h3><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px"><strong style="color:#8a2be2">Monkey:</strong> Keyboard vandal! Randomly mashes buttons every <span style="font-style:italic">5 seconds</span></li><li style="margin-bottom:8px"><strong style="color:#ff1493">Boomer Mom:</strong> Technophobic but determined - earns <span style="font-weight:bold">3 points/sec</span></li><li style="margin-bottom:8px"><strong style="color:#00bfff">Gen Z Kid:</strong> Scrolls instead of types, but racks up <span style="font-weight:bold">20 points/sec</span></li><li style="margin-bottom:8px"><strong style="color:#228b22">Keyboard Upgrade:</strong> Doubles all your click earnings!</li></ul><h3 style="color:#ff6b00;font-size:18px;margin:15px 0 10px">Pro Clicking Strategies</h3><p style="margin:0 0 15px">Before boosters save you, try <span style="font-weight:bold">multitapping techniques</span>: combine spacebar hits with mouse clicks for maximum velocity. Your keyboard may never recover!</p><h2 style="color:#ff6b00;font-size:22px;margin:20px 0 10px">Simple Controls</h2><p style="margin:0 0 5px;font-weight:bold">Desktop:</p><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:5px">SPACE key or mouse click = Points!</li></ul><p style="margin:0 0 5px;font-weight:bold">Mobile:</p><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:5px">Tap the virtual spacebar</li></ul><h2 style="color:#ff6b00;font-size:22px;margin:20px 0 10px">More Clicker Fun</h2><p style="margin:0 0 15px">Love idle games? Try <a href="https://www.onlinegames.io/idle-dev-startup/" style="color:#0066cc;text-decoration:none">Idle Dev Startup</a> or browse our full collection of <a href="https://www.onlinegames.io/t/idle/" style="color:#0066cc;text-decoration:none">idle games</a>. New addictive titles added regularly!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

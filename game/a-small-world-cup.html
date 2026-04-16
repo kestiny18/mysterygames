@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Small World Cup - World Cup | MysteryGames</title>
+  <meta name="description" content="Forget all those other soccer games where players throw the ball toward the goalposts. This time, we're throwing the players at the ball and crossing our...">
+  <link rel="canonical" href="https://mysterygames.org/game/a-small-world-cup.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="A Small World Cup - Free Online Game">
+  <meta property="og:description" content="Forget all those other soccer games where players throw the ball toward the goalposts. This time, we're throwing the players at the ball and crossing our...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "A Small World Cup",
+    "description": "Forget all those other soccer games where players throw the ball toward the goalposts. This time, we're throwing the players at the ball and crossing our fingers it somehow turns into a goal! A Small ",
+    "image": "https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg",
+    "url": "https://mysterygames.org/game/a-small-world-cup.html",
+    "genre": "World Cup",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=World Cup" class="hover:text-blue-600">World Cup</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">A Small World Cup</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/more2/a-small-world-cup/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg" alt="A Small World Cup" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">World Cup</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">A Small World Cup</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">Forget all those other soccer games where players throw the ball toward the goalposts. This time, we're throwing the players at the ball and crossing our fingers it somehow turns into a goal! <strong style="color:#e74c3c;font-weight:700;">A Small World Cup</strong> is a funny <a href="https://www.onlinegames.io/t/2-player/" style="color:#3498db;text-decoration:none;">2 player</a> soccer game with pixelated visuals where the players (yes, the ragdoll ones) do all the heavy lifting... or slamming. Instead of carefully lining up a shot, you'll aim your ragdoll footballer, pull back, and release for a full-speed dive at the ball. It's chaotic, it's funny, and it's as unpredictable as it sounds! Prepare to laugh, strategize (kind of), and accidentally score on yourself—because in this game, anything can happen! You can pick your national team and compete in 1v1 matches to win cups like the Euro Cup 2024, World Cup, America Cup and more.</p><h2 style="margin:15px 0 10px;padding:0;font-size:20px;color:#2c3e50;">Controls</h2><p style="margin:0 0 5px;padding:0;font-size:16px;font-weight:700;color:#333;">For Computers:</p><ul style="margin:0 0 15px;padding:0 0 0 20px;"><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Hold LMB to aim, release to send</li></ul><p style="margin:0 0 5px;padding:0;font-size:16px;font-weight:700;color:#333;">For Mobiles:</p><ul style="margin:0 0 15px;padding:0 0 0 20px;"><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Tap and hold to aim release to send</li></ul><h2 style="margin:15px 0 10px;padding:0;font-size:20px;color:#2c3e50;">How to Play A Small World Cup</h2><ul style="margin:0 0 15px;padding:0 0 0 20px;"><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Pick from 8 glorious tournaments: World Cup Classic, World Cup 2022, Euro Cup 2024, America Cup, or dive into club territory with options like Euro Clubs, Italian Clubs, English Clubs, and Other Clubs.</li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Pick your mode: normal or golden goal.<ul style="margin:5px 0 5px 15px;padding:0 0 0 15px;"><li style="margin:0 0 3px;padding:0;font-size:14px;color:#333;"><strong style="font-weight:700;">Normal Mode: </strong>Classic 45-second matches to prove you're the best—or bump it to 90 seconds if you like dragging out your victories.</li><li style="margin:0 0 3px;padding:0;font-size:14px;color:#333;"><strong style="font-weight:700;">Golden Goal Mode: </strong>One goal wins it all. Quick, brutal, and perfect for those who live on the edge.</li></ul></li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Choose from a range of countries, and don't worry—your choice just changes the shirt color, not your skill level. The game then kindly assigns you a random opponent who is equally as clueless.</li></ul><h3 style="margin:15px 0 10px;padding:0;font-size:18px;color:#2c3e50;">When the Match Starts</h3><ul style="margin:0 0 15px;padding:0 0 0 20px;"><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Hit the start and let the madness begin! It's a 1v1 showdown where YOU are the offense and the defense.</li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Aim your ragdoll footballer by dragging your mouse (or tapping if you're on mobile).</li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Release and watch as your player launches at the ball with all the grace of a flying potato.</li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Go easy on the power, or you might score an own goal. Your opponent will thank you.</li><li style="margin:0 0 5px;padding:0;font-size:15px;color:#333;">Outscore your opponent, move through the rounds, and lift the trophy like the ragdoll legend you are!</li></ul><h2 style="margin:15px 0 10px;padding:0;font-size:20px;color:#2c3e50;">Developer</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">RujoGames created A Small World Cup.</p><h2 style="margin:15px 0 10px;padding:0;font-size:20px;color:#2c3e50;">More World Cup Games</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">The roar of the crowd, cheers, vuvuzelas, and whistles.. If you like the spirit of soccer, you're invited to explore other online <a href="https://www.onlinegames.io/t/world-cup/" style="color:#3498db;text-decoration:none;">World Cup games</a> on OnlineGames.io.</p></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

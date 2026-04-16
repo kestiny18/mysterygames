@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprunki - Music | MysteryGames</title>
+  <meta name="description" content="Sprunki is a fun and creative music game where you can become a DJ. Dress up characters from a quirky band called the Sprunki by dragging and dropping cool...">
+  <link rel="canonical" href="https://mysterygames.org/game/sprunki.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sprunki - Free Online Game">
+  <meta property="og:description" content="Sprunki is a fun and creative music game where you can become a DJ. Dress up characters from a quirky band called the Sprunki by dragging and dropping cool...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/911/Sprunki.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Sprunki",
+    "description": "Sprunki is a fun and creative music game where you can become a DJ. Dress up characters from a quirky band called the Sprunki by dragging and dropping cool clothes and accessories onto them. Each cost",
+    "image": "https://www.onlinegames.io/media/posts/911/Sprunki.jpg",
+    "url": "https://mysterygames.org/game/sprunki.html",
+    "genre": "Music",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Music" class="hover:text-blue-600">Music</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Sprunki</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/more2/sprunki/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/911/Sprunki.jpg" alt="Sprunki" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Music</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Sprunki</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;padding:0;font-size:16px;line-height:1.5"><strong style="color:#ff6b6b;font-weight:800">Sprunki</strong><span style="color:#333"> is a fun and creative </span><a href="https://www.onlinegames.io/t/music/" style="color:#4dabf7;text-decoration:none">music game</a><span style="color:#333"> where you can become a DJ. Dress up characters from a quirky band called the Sprunki by dragging and dropping cool clothes and accessories onto them. Each costume or accessory you choose adds a different musical sound, such as bass, melody, or drums. Enter the world of colorful Sprunkis, like Mr. Tree, Mr Sun, Lime and Garnold. If you're feeling extra whimsical, put the black hat on any member. And things will take a spooky turn. The theme gets darker, and visuals and sounds get scarier. Each hat and each accessory you put on makes the Sprunkis feel like they ran away from a horror movie.</span></p><h2 style="margin:15px 0 10px;color:#ff6b6b;font-size:20px">Controls</h2><ul style="margin:0 0 15px 20px;padding:0"><li style="margin-bottom:5px"><strong style="color:#333">Computers: </strong><span style="color:#333">Use your mouse to drag and drop accessories</span></li><li style="margin-bottom:5px"><strong style="color:#333">Mobiles: </strong><span style="color:#333">Drag and drop accessories by tapping</span></li></ul><h2 style="margin:15px 0 10px;color:#ff6b6b;font-size:20px">How to Play Sprunki</h2><ul style="margin:0 0 15px 20px;padding:0"><li style="margin-bottom:5px;color:#333">Begin by picking a fun character from the lineup, each with its own special sound.</li><li style="margin-bottom:5px;color:#333">You'll see different outfits or accessories at the bottom.</li><li style="margin-bottom:5px;color:#333">Dress each of the Sprunks to give them unique sound elements.</li><li style="margin-bottom:5px;color:#333">You'll encounter quirky items like devil horns, tree and sun costumes, bunny ears and even satellite dishes along the way. You cannot use an item on multiple Sprunks. If you'd like to reset the band, click on the replay button on the top right.</li><li style="margin-bottom:5px;color:#333">Mix and match different music loops and sounds to create beautiful melodies or experimental tracks.</li><li style="margin-bottom:5px;color:#333">If you want to concentrate on one character's sound, just hover over them and click the headphone icon to mute the others.</li><li style="margin-bottom:5px;color:#333">Similarly, you can mute one's sound by hovering over them and clicking the mute icon.</li><li style="margin-bottom:5px;color:#333">Don't be afraid to experiment with different outfits to discover hidden musical surprises!</li></ul><h2 style="margin:15px 0 10px;color:#ff6b6b;font-size:20px">What Is Sprunki Incredibox?</h2><p style="margin:0 0 15px;padding:0;font-size:16px;line-height:1.5;color:#333">Incredibox is a unique experimental music app that lets you conduct a group of beatboxers. Sprunki Incredibox originated as a fun, fan-made mode created by a 15-year-old Incredibox user named NyankoBfLol. It skyrocketed and quickly gained popularity, attracting an audience twice the size of the original Incredibox. What makes Sprunki truly unique is its shift from a joyful music game to a more eerie experience. The bright colors slowly change to darker shades, and your characters gain spooky looks. This creepy twist of this mode captured the imagination of users, leading to its own standalone game.</p><p style="margin:0 0 15px;padding:0;font-size:16px;line-height:1.5;color:#333">Even more surprisingly, Sprunki characters have emerged as new horror mascots, joining the ranks of figures like the Rainbow Friends, Freddy Fazbear, Granny, and Poppy. Fans all around the world have contributed to the Sprunki hype in a way. Today, you can find Sprunks not only in online music-making games but also across various genres, such as horror games, platformers, trivia games, and more. For example, in <a href="https://www.onlinegames.io/obby-find-sprunki/" style="color:#4dabf7;text-decoration:none">Obby: Find Sprunki</a> game, you can go for a Sprunki hunt and find hidden characters on an obstacle course. There are even fan fiction stories that explore themes around Sprunkis being orphans or having disabilities, adding depth to their intriguing lore.</p><h2 style="margin:15px 0 10px;color:#ff6b6b;font-size:20px">Developer</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333">The original Incredibox mode was created by NyankoBfLol. This version of Sprunki game was created by Sprunki Games.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

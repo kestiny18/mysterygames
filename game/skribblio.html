@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skribblio - Board | MysteryGames</title>
+  <meta name="description" content="Scribble, scribble, scribble!✍✍✍Skribblio is a great online game for word game lovers with extensive drawing skills. Draw the given word, and let the other...">
+  <link rel="canonical" href="https://mysterygames.org/game/skribblio.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skribblio - Free Online Game">
+  <meta property="og:description" content="Scribble, scribble, scribble!✍✍✍Skribblio is a great online game for word game lovers with extensive drawing skills. Draw the given word, and let the other...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/385/Skribblio.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Skribblio",
+    "description": "Scribble, scribble, scribble!✍✍✍Skribblio is a great online game for word game lovers with extensive drawing skills. Draw the given word, and let the other participants guess the word correctly as fas",
+    "image": "https://www.onlinegames.io/media/posts/385/Skribblio.jpg",
+    "url": "https://mysterygames.org/game/skribblio.html",
+    "genre": "Board",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Board" class="hover:text-blue-600">Board</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Skribblio</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://skribbl.io/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/385/Skribblio.jpg" alt="Skribblio" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Board</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Skribblio</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Scribble, scribble, scribble!✍✍✍<strong style="font-family:var(--editor-font-family);font-size:inherit;">Skribblio</strong> is a great online game for word game lovers with extensive drawing skills. Draw the given word, and let the other participants guess the word correctly as fast as possible.</p><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">When you are done with the scribbling, it's your turn to guess. Be as quick as possible in both drawing and guessing; then, you will gain more points.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">How to Play Skribblio?</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);"><li>At first, pick a username and enter a room.</li><li>You will see a number of players in the room.</li><li>When it's your turn, you will draw the given word. If not, try to guess the word.</li><li>Don't forget to chat with others while playing. Have a great time!</li><li>Learn about how to draw and make a guess below.</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Draw The Given Word</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);"><li>You will see several word options if it's your turn to scribble.</li><li>Choose a word that you can draw well.</li><li>You have 80 seconds to draw the word.</li><li>You will see the toolbox at the bottom.</li><li>Choose the color and size of the pen.</li><li>Start drawing your word and let them guess as soon as possible.</li><li>Using different colors beautifies your drawings and increases your chances.</li><li>If you misdraw something, you can undo or clear the board.</li><li>To erase a part of the drawing, use the swap.</li><li>Use the hotkeys to draw faster.</li></ul><h3 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.2em;font-weight:var(--font-weight-bold);">Hotkeys</h3><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);"><li><strong>U</strong>: Undo the last action</li><li><strong>B</strong>: Choose the brush</li><li><strong>F</strong>: Fill / Color the area</li><li><strong>C</strong>: Clear the board</li><li><strong>S</strong>: Swap between brush and eraser</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Guess the Word Before Others</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);"><li>While the other players draw, you must guess the word in the right-hand chat section.</li><li>You can guess as many times as you want. No limit on that.</li><li>The number of letters is at the top of your screen. Consider that while guessing the word.</li><li>The faster you find the word, the more points you get. If you find the word, make your guess before others and get the points!</li><li>Use like and dislike buttons to show your satisfaction with a player's drawing.</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Create A Private Room in Skribblio</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);"><li>If you'd like, you can make Skribble.io a private experience.</li><li>Create your own room and send the invitation link to your friend(s).</li><li>Set the language, draw time, number of players and rounds.</li><li>You can even set a bunch of custom words and play only with them. Some inside jokes would perfectly fit here, huh?</li><li>Select the word mode: Normal, Hidden and Combination</li><li>In hidden word mode, you will only see question marks instead of hints while guessing.</li><li>In combination mode, you must draw or guess 2 words at once. Challenge yourself in combination mode if you think you are a pro scribbler.</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">How many players are there in Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">A minimum of 2 and a maximum of 20 players can participate in a Skribblio room. You may notice some players leave or enter while the game continues.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Can you use a tablet pen with Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Yes, you can use a tablet pen with Skribblio. In order to do that, connect your drawing tablet to your computer. Arrange your settings so that you can move your cursor by dragging your tablet pen. Then, you are ready to show off your drawing skills in Skribblio.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">How do I change the line size and colors in Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">The toolbox is at the bottom of the screen. Its functions include showing your pen's color and size, as well as an eraser and an undo button for when you misdraw.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Which languages are available in Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Skribblio is most commonly played in English. However, you can play Skribblio in 28 languages, including German, French, Italian, and Japanese. Choose your language before entering a room. If you select a less-spoken language, you may need to wait for other players to join the game for a while. If you want to play it immediately, invite your friends to play together.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Can you spectate in Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Unfortunately, you can't. There is no spectator mode in Skribblio yet. If you are too shy to participate or draw in a Skribblio room, don't worry. Your turn will only take 80 seconds. It will get much easier and more fun when you play along. Give yourself a couple of rounds to get used to it.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">How do I kick someone out in Skribblio?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">At Skribblio, there is a democratic atmosphere. If you did not like a player's behavior in the game, you may vote to kick them by clicking on the pax. If the majority votes for kicking that player, he is out of the room.</p><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">If you have created the room, you can kick anyone without voting.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Which game is Skribblio inspired by?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Skribblio is inspired by the famous board game Pictionary. Some consider Skribblio as an online version of Pictionary.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Developer</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">Skribblio was created by ticedev.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:1.5em;font-weight:var(--font-weight-bold);">Similar Games</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);">If you like drawing games, test your hand at <a href="https://www.onlinegames.io/draw-the-bridge/" style="color:var(--link-color);text-decoration:underline;">Draw the Bridge</a>. Or else, continue the fun by playing our fantastic <a href="https://www.onlinegames.io/t/drawing/" style="color:var(--link-color);text-decoration:underline;">Drawing Games</a> collection. Follow the links to play for free on your browser.</p></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

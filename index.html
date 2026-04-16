@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MysteryGames - Play Random Games Online for Free</title>
+  <meta name="description" content="Discover and play 89+ free online games on MysteryGames. Use our Surprise Me feature to get a random game recommendation and beat choice overload!">
+  <link rel="canonical" href="https://mysterygames.org/">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MysteryGames - Play Random Games Online">
+  <meta property="og:description" content="Can't decide? Let us pick a game for you! 89+ free games with our Surprise Me feature.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mysterygames.org/">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    .category-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .hidden-card { display: none; }
+    #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+      .header-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-28 p-4">
+    <!-- Hero / Surprise Me -->
+    <section id="surprise" class="bg-white rounded-2xl shadow-md p-8 mb-10 text-center">
+      <h1 class="text-4xl font-bold mb-3 text-gray-900">Can't Decide?</h1>
+      <p class="text-lg text-gray-600 mb-6">We'll pick a random game for you. 89 games, zero choice paralysis.</p>
+      <button onclick="surpriseMe()" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-xl transition shadow-lg hover:shadow-xl">
+        Surprise Me!
+      </button>
+      <div id="surprise-result" class="mt-6 hidden">
+        <p class="text-gray-500 mb-3">You got:</p>
+        <div class="bg-gray-50 rounded-xl p-6 inline-block">
+          <img id="surprise-img" src="" alt="" class="w-48 h-32 object-cover rounded-lg mb-3 mx-auto">
+          <h3 id="surprise-name" class="text-xl font-bold mb-2"></h3>
+          <a id="surprise-link" href="" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg transition">Play Now</a>
+          <button onclick="surpriseMe()" class="ml-2 text-blue-600 hover:underline text-sm">Try another</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Library -->
+    <section>
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">All Games (89)</h2>
+        <div class="flex flex-wrap gap-2" id="category-filters">
+          <button class="category-btn active px-3 py-1 rounded-full text-sm border border-gray-200 transition" data-category="all">All</button>
+          <button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Drift">Drift (5 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Stickman">Stickman (4 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Basketball">Basketball (4 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Avoid">Avoid (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Bike">Bike (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Car">Car (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Arcade">Arcade (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Minecraft">Minecraft (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Simulator">Simulator (3 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Idle">Idle (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Kids">Kids (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Funny">Funny (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Card">Card (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Ball">Ball (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Airplane">Airplane (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Restaurant">Restaurant (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Shooting">Shooting (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Driving">Driving (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="2 Player">2 Player (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Clicker">Clicker (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Horror">Horror (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Crash">Crash (2 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Soccer">Soccer (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Flash">Flash (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Tank">Tank (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Tycoon">Tycoon (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Parking">Parking (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Ninja">Ninja (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Running">Running (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Truck">Truck (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Destroy">Destroy (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Makeup">Makeup (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Racing">Racing (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Battle Royale">Battle Royale (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Sports">Sports (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Crafting">Crafting (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Roblox">Roblox (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Traffic">Traffic (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Parkour">Parkour (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Board">Board (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="io Games">io Games (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Snake">Snake (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Girl">Girl (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Police">Police (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Kart">Kart (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="GTA">GTA (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Music">Music (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Escape">Escape (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Pixel">Pixel (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Cozy">Cozy (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Blog">Blog (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="First Person Shooter">First Person Shooter (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="Survival">Survival (1 games)</button><button class="category-btn px-3 py-1 rounded-full text-sm border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition" data-category="World Cup">World Cup (1 games)</button>
+        </div>
+      </div>
+      <div id="game-grid">
+                <a href="/game/asian-cup-soccer.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Soccer">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1029/asian-cup-soccer.jpg" alt="Asian Cup Soccer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Soccer</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Asian Cup Soccer</h3>
+          </div>
+        </a>
+        <a href="/game/gold-miner.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Flash">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1027/gold-miner.jpg" alt="Gold Miner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Flash</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Gold Miner</h3>
+          </div>
+        </a>
+        <a href="/game/religious-idle.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Idle">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1028/religious-idle.jpg" alt="Religious Idle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Idle</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Religious Idle</h3>
+          </div>
+        </a>
+        <a href="/game/war-of-tanks-paper-note.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Tank">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1024/war-of-tanks-papernote.jpg" alt="War of Tanks Paper Note" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Tank</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">War of Tanks Paper Note</h3>
+          </div>
+        </a>
+        <a href="/game/logistics-inc.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Tycoon">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1025/Logistics-Inc.jpg" alt="Logistics Inc" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Tycoon</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Logistics Inc</h3>
+          </div>
+        </a>
+        <a href="/game/stick-fighter-3d.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Stickman">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg" alt="Stick Fighter 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Stickman</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Stick Fighter 3D</h3>
+          </div>
+        </a>
+        <a href="/game/epic-basketball.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Basketball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg" alt="Epic Basketball" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Epic Basketball</h3>
+          </div>
+        </a>
+        <a href="/game/geometry-vibes-x-ball.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Avoid">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1022/geometry-vibes-xball.jpg" alt="Geometry Vibes X-Ball" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Avoid</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Geometry Vibes X-Ball</h3>
+          </div>
+        </a>
+        <a href="/game/car-parking-city-duel.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Parking">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1021/car-parking-city-duel.jpg" alt="Car Parking City Duel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Parking</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Car Parking City Duel</h3>
+          </div>
+        </a>
+        <a href="/game/ultimate-moto.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Bike">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg" alt="Ultimate Moto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Bike</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Ultimate Moto</h3>
+          </div>
+        </a>
+        <a href="/game/gt-cars-city-racing.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Car">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg" alt="GT Cars City Racing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Car</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">GT Cars City Racing</h3>
+          </div>
+        </a>
+        <a href="/game/the-smurfs-cooking.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Kids">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1018/the-smurfs-cooking.jpg" alt="The Smurfs Cooking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kids</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">The Smurfs Cooking</h3>
+          </div>
+        </a>
+        <a href="/game/sword-play-ninja-slice-runner.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Ninja">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1016/sword-play.jpg" alt="Sword Play Ninja Slice Runner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Ninja</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Sword Play Ninja Slice Runner</h3>
+          </div>
+        </a>
+        <a href="/game/red-light-green-light.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Running">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1017/red-light-green-light.jpg" alt="Red Light Green Light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Running</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Red Light Green Light</h3>
+          </div>
+        </a>
+        <a href="/game/apocalypse-truck.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Truck">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1015/apocalypse-truck.jpg" alt="Apocalypse Truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Truck</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Apocalypse Truck</h3>
+          </div>
+        </a>
+        <a href="/game/pacxon-new-realms.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Arcade">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg" alt="PacXon New Realms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Arcade</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">PacXon New Realms</h3>
+          </div>
+        </a>
+        <a href="/game/crazy-motorcycle.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Bike">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg" alt="Crazy Motorcycle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Bike</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Crazy Motorcycle</h3>
+          </div>
+        </a>
+        <a href="/game/kick-the-pirate.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Destroy">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1012/Kick-The-Pirate.jpg" alt="Kick the Pirate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Destroy</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Kick the Pirate</h3>
+          </div>
+        </a>
+        <a href="/game/julie-beauty-salon.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Makeup">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1011/Julie-Beauty-Salon.jpg" alt="Julie Beauty Salon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Makeup</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Julie Beauty Salon</h3>
+          </div>
+        </a>
+        <a href="/game/tunnel-road.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Avoid">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg" alt="Tunnel Road" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Avoid</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Tunnel Road</h3>
+          </div>
+        </a>
+        <a href="/game/thief-puzzle.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Funny">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg" alt="Thief Puzzle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Funny</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Thief Puzzle</h3>
+          </div>
+        </a>
+        <a href="/game/mini-cars-racing.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Racing">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1010/Mini-Cars-Racing.jpg" alt="Mini Cars Racing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Racing</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Mini Cars Racing</h3>
+          </div>
+        </a>
+        <a href="/game/crazy-cattle-3d.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Battle Royale">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1004/Crazy-Cattle-3D.jpg" alt="Crazy Cattle 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Battle Royale</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Crazy Cattle 3D</h3>
+          </div>
+        </a>
+        <a href="/game/pyramid-solitaire.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Card">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1006/pyramid-Solitaire.jpg" alt="Pyramid Solitaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Card</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Pyramid Solitaire</h3>
+          </div>
+        </a>
+        <a href="/game/solitaire.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Card">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1007/solitaire.jpg" alt="Solitaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Card</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Solitaire</h3>
+          </div>
+        </a>
+        <a href="/game/geometry-arrow.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Avoid">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1005/Geometry-Arrow.jpg" alt="Geometry Arrow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Avoid</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Geometry Arrow</h3>
+          </div>
+        </a>
+        <a href="/game/drift-king.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Drift">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/729/Drift-King.jpg" alt="Drift King" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Drift King</h3>
+          </div>
+        </a>
+        <a href="/game/bloxd-io.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Minecraft">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg" alt="Bloxd io" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Minecraft</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Bloxd io</h3>
+          </div>
+        </a>
+        <a href="/game/love-tester.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Kids">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/152/love-tester.jpg" alt="Love Tester" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kids</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Love Tester</h3>
+          </div>
+        </a>
+        <a href="/game/highway-traffic.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Car">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg" alt="Highway Traffic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Car</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Highway Traffic</h3>
+          </div>
+        </a>
+        <a href="/game/extreme-run-3d.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Ball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/839/Extreme-Run-3D.jpg" alt="Extreme Run 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Ball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Extreme Run 3D</h3>
+          </div>
+        </a>
+        <a href="/game/golf-orbit.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Sports">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/953/Golf-Orbit-Play-Online.jpg" alt="Golf Orbit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Sports</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Golf Orbit</h3>
+          </div>
+        </a>
+        <a href="/game/miniblox-io.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Crafting">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/595/MiniBlox.io.jpg" alt="Miniblox io" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Crafting</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Miniblox io</h3>
+          </div>
+        </a>
+        <a href="/game/obby-but-youre-on-a-bike.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Roblox">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/885/obby-but-your-on-a-bike.jpg" alt="Obby But You're on a Bike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Roblox</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Obby But You're on a Bike</h3>
+          </div>
+        </a>
+        <a href="/game/crazy-plane-landing.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Airplane">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/999/crazy-plane-landing.jpg" alt="Crazy Plane Landing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Airplane</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Crazy Plane Landing</h3>
+          </div>
+        </a>
+        <a href="/game/traffic-jam-3d.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Traffic">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/784/Traffic-Jam.jpg" alt="Traffic Jam 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Traffic</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Traffic Jam 3D</h3>
+          </div>
+        </a>
+        <a href="/game/slope-rolling.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Ball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/961/Slope-Rolling.jpg" alt="Slope Rolling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Ball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Slope Rolling</h3>
+          </div>
+        </a>
+        <a href="/game/geometry-dash.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Arcade">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg" alt="Geometry Dash" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Arcade</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Geometry Dash</h3>
+          </div>
+        </a>
+        <a href="/game/life-simulator.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Simulator">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/998/life-simulator.jpg" alt="Life Simulator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Simulator</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Life Simulator</h3>
+          </div>
+        </a>
+        <a href="/game/fast-food-rush.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Restaurant">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/979/fast-food-rush.jpg" alt="Fast Food Rush" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Restaurant</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Fast Food Rush</h3>
+          </div>
+        </a>
+        <a href="/game/checkout-frenzy.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Simulator">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/974/checkout-frenzy-cashier-game.jpg" alt="Checkout Frenzy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Simulator</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Checkout Frenzy</h3>
+          </div>
+        </a>
+        <a href="/game/basketball-stars.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Basketball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/380/Basketball-Stars-Game.jpg" alt="Basketball Stars" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Basketball Stars</h3>
+          </div>
+        </a>
+        <a href="/game/stack-fire-ball.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Arcade">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/184/Stack-Fire-Ball-Game.jpg" alt="Stack Fire Ball" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Arcade</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Stack Fire Ball</h3>
+          </div>
+        </a>
+        <a href="/game/drift-hunters-2.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Drift">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/669/Drift-Hunters-2-Online.jpg" alt="Drift Hunters 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Drift Hunters 2</h3>
+          </div>
+        </a>
+        <a href="/game/cube-worlds.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Minecraft">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/986/Cube-Worlds.jpg" alt="Cube Worlds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Minecraft</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Cube Worlds</h3>
+          </div>
+        </a>
+        <a href="/game/masked-special-forces.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Shooting">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/310/Masked-Special-Forces-FPS.jpg" alt="Masked Special Forces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Shooting</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Masked Special Forces</h3>
+          </div>
+        </a>
+        <a href="/game/obby-tower-parkour-climb.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Parkour">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/943/obby-tower-parkour-climb.jpg" alt="Obby Tower Parkour Climb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Parkour</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Obby Tower Parkour Climb</h3>
+          </div>
+        </a>
+        <a href="/game/motor-tour.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Bike">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg" alt="Motor Tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Bike</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Motor Tour</h3>
+          </div>
+        </a>
+        <a href="/game/skribblio.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Board">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/385/Skribblio.jpg" alt="Skribblio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Board</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Skribblio</h3>
+          </div>
+        </a>
+        <a href="/game/vex-x3m-2.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Driving">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/984/Vex-X3M-2.jpg" alt="Vex X3M 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Driving</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Vex X3M 2</h3>
+          </div>
+        </a>
+        <a href="/game/paper-io-2.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="io Games">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/395/Paper-io-2-Online.jpg" alt="Paper io 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">io Games</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Paper io 2</h3>
+          </div>
+        </a>
+        <a href="/game/madalin-stunt-cars-pro.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Car">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/401/Madalin-Stunt-Cars-Pro-Game.jpg" alt="Madalin Stunt Cars Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Car</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Madalin Stunt Cars Pro</h3>
+          </div>
+        </a>
+        <a href="/game/hoop-world-3d.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Basketball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/976/Hoop-World.jpg" alt="Hoop World 3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Hoop World 3D</h3>
+          </div>
+        </a>
+        <a href="/game/basket-random.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="2 Player">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/651/Basket-Random.jpg" alt="Basket Random" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">2 Player</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Basket Random</h3>
+          </div>
+        </a>
+        <a href="/game/gta-simulator.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Simulator">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/416/GTA-Simulator.jpg" alt="GTA Simulator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Simulator</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">GTA Simulator</h3>
+          </div>
+        </a>
+        <a href="/game/gulper-io.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Snake">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/660/Gulper-io.jpg" alt="Gulper io" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Snake</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Gulper io</h3>
+          </div>
+        </a>
+        <a href="/game/capybara-clicker-pro.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Clicker">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/554/Capybara-Clicker-Pro.jpg" alt="Capybara Clicker Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Clicker</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Capybara Clicker Pro</h3>
+          </div>
+        </a>
+        <a href="/game/real-flight-simulator.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Airplane">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/342/Real-Flight-Simulator-2.jpg" alt="Real Flight Simulator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Airplane</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Real Flight Simulator</h3>
+          </div>
+        </a>
+        <a href="/game/tb-world.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Girl">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/948/TB-World-Toca-Boca.jpg" alt="TB World" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Girl</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">TB World</h3>
+          </div>
+        </a>
+        <a href="/game/stickman-parkour.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Stickman">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/871/stickman-parkour-OG.jpg" alt="Stickman Parkour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Stickman</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Stickman Parkour</h3>
+          </div>
+        </a>
+        <a href="/game/escape-car.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Police">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1000/Escape-Car.jpg" alt="Escape Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Police</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Escape Car</h3>
+          </div>
+        </a>
+        <a href="/game/smash-karts.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Kart">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg" alt="Smash Karts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kart</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Smash Karts</h3>
+          </div>
+        </a>
+        <a href="/game/drift-hunters-pro.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Drift">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/397/Drift-Hunters-Pro.jpg" alt="Drift Hunters Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Drift Hunters Pro</h3>
+          </div>
+        </a>
+        <a href="/game/five-nights-at-poppy.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Horror">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg" alt="Five Nights at Poppy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Horror</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Five Nights at Poppy</h3>
+          </div>
+        </a>
+        <a href="/game/stickman-gta-city.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="GTA">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/900/stickman-gta-city-free.jpg" alt="Stickman GTA City" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">GTA</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Stickman GTA City</h3>
+          </div>
+        </a>
+        <a href="/game/survival-race.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Crash">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/768/Survival-Race.jpg" alt="Survival Race" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Crash</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Survival Race</h3>
+          </div>
+        </a>
+        <a href="/game/free-city-drive.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Driving">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/349/Free-City-Drive-Online.jpg" alt="Free City Drive" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Driving</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Free City Drive</h3>
+          </div>
+        </a>
+        <a href="/game/sprunki.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Music">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/911/Sprunki.jpg" alt="Sprunki" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Music</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Sprunki</h3>
+          </div>
+        </a>
+        <a href="/game/granny.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Escape">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/884/granny.jpg" alt="Granny" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Escape</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Granny</h3>
+          </div>
+        </a>
+        <a href="/game/five-nights-at-freddys-2.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Horror">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/771/FNaF-2.jpg" alt="Five Nights At Freddy's 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Horror</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Five Nights At Freddy's 2</h3>
+          </div>
+        </a>
+        <a href="/game/pixel-driver.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Pixel">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/990/Pixel-Driver.jpg" alt="Pixel Driver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Pixel</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Pixel Driver</h3>
+          </div>
+        </a>
+        <a href="/game/get-on-top.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="2 Player">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/697/Get-on-Top.jpg" alt="Get On Top" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">2 Player</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Get On Top</h3>
+          </div>
+        </a>
+        <a href="/game/minecraft-classic.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Minecraft">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/382/Minecraft-Classic-Game.jpg" alt="Minecraft Classic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Minecraft</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Minecraft Classic</h3>
+          </div>
+        </a>
+        <a href="/game/unpacking.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Cozy">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/481/Unpacking.jpg" alt="Unpacking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Cozy</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Unpacking</h3>
+          </div>
+        </a>
+        <a href="/game/basket-hoop.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Basketball">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg" alt="Basket Hoop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Basket Hoop</h3>
+          </div>
+        </a>
+        <a href="/game/stickman-destruction.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Stickman">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/233/Stickman-Destruction.jpg" alt="Stickman Destruction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Stickman</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Stickman Destruction</h3>
+          </div>
+        </a>
+        <a href="/game/rooftop-duel.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Shooting">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg" alt="Rooftop Duel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Shooting</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Rooftop Duel</h3>
+          </div>
+        </a>
+        <a href="/game/spacebar-clicker.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Clicker">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/684/Spacebar-Clicker.jpg" alt="Spacebar Clicker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Clicker</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Spacebar Clicker</h3>
+          </div>
+        </a>
+        <a href="/game/ovo.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Stickman">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/398/OvO-Game.jpg" alt="OvO" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Stickman</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">OvO</h3>
+          </div>
+        </a>
+        <a href="/game/pacman-30th-anniversary.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Blog">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/641/Pac-Man-30th-Anniversary.jpg" alt="Pacman 30th Anniversary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Blog</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Pacman 30th Anniversary</h3>
+          </div>
+        </a>
+        <a href="/game/fleeing-the-complex.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Funny">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/978/fleeing-complex.jpg" alt="Fleeing the Complex" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Funny</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Fleeing the Complex</h3>
+          </div>
+        </a>
+        <a href="/game/papas-sushiria.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Restaurant">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/985/Papas-Sushiria.jpg" alt="Papa's Sushiria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Restaurant</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Papa's Sushiria</h3>
+          </div>
+        </a>
+        <a href="/game/crazy-strike-force.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="First Person Shooter">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/366/Crazy-Strike-Force.jpg" alt="Crazy Strike Force" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">First Person Shooter</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Crazy Strike Force</h3>
+          </div>
+        </a>
+        <a href="/game/suroi.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Survival">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/817/suroi.io.jpg" alt="Suroi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Survival</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Suroi</h3>
+          </div>
+        </a>
+        <a href="/game/carnage-battle-arena.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Crash">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/987/carnage-battle-arena.jpg" alt="Carnage Battle Arena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Crash</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Carnage Battle Arena</h3>
+          </div>
+        </a>
+        <a href="/game/a-small-world-cup.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="World Cup">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg" alt="A Small World Cup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">World Cup</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">A Small World Cup</h3>
+          </div>
+        </a>
+        <a href="/game/drift-boss.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Drift">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg" alt="Drift Boss" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Drift Boss</h3>
+          </div>
+        </a>
+        <a href="/game/idle-breakout.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Idle">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg" alt="Idle Breakout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Idle</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Idle Breakout</h3>
+          </div>
+        </a>
+        <a href="/game/burnout-city.html" class="game-card group block bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" data-category="Drift">
+          <div class="aspect-video bg-gray-100 overflow-hidden">
+            <img src="https://www.onlinegames.io/media/posts/861/burnoutcity.jpg" alt="Burnout City" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+            <h3 class="mt-2 font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Burnout City</h3>
+          </div>
+        </a>
+      </div>
+      <p id="no-games" class="hidden text-center text-gray-500 py-10">No games in this category.</p>
+    </section>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Surprise Me feature
+    const gamesData = [{"name": "Asian Cup Soccer", "logo": "https://www.onlinegames.io/media/posts/1029/asian-cup-soccer.jpg", "slug": "asian-cup-soccer"}, {"name": "Gold Miner", "logo": "https://www.onlinegames.io/media/posts/1027/gold-miner.jpg", "slug": "gold-miner"}, {"name": "Religious Idle", "logo": "https://www.onlinegames.io/media/posts/1028/religious-idle.jpg", "slug": "religious-idle"}, {"name": "War of Tanks Paper Note", "logo": "https://www.onlinegames.io/media/posts/1024/war-of-tanks-papernote.jpg", "slug": "war-of-tanks-paper-note"}, {"name": "Logistics Inc", "logo": "https://www.onlinegames.io/media/posts/1025/Logistics-Inc.jpg", "slug": "logistics-inc"}, {"name": "Stick Fighter 3D", "logo": "https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg", "slug": "stick-fighter-3d"}, {"name": "Epic Basketball", "logo": "https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg", "slug": "epic-basketball"}, {"name": "Geometry Vibes X-Ball", "logo": "https://www.onlinegames.io/media/posts/1022/geometry-vibes-xball.jpg", "slug": "geometry-vibes-x-ball"}, {"name": "Car Parking City Duel", "logo": "https://www.onlinegames.io/media/posts/1021/car-parking-city-duel.jpg", "slug": "car-parking-city-duel"}, {"name": "Ultimate Moto", "logo": "https://www.onlinegames.io/media/posts/1020/ultimate-moto.jpg", "slug": "ultimate-moto"}, {"name": "GT Cars City Racing", "logo": "https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg", "slug": "gt-cars-city-racing"}, {"name": "The Smurfs Cooking", "logo": "https://www.onlinegames.io/media/posts/1018/the-smurfs-cooking.jpg", "slug": "the-smurfs-cooking"}, {"name": "Sword Play Ninja Slice Runner", "logo": "https://www.onlinegames.io/media/posts/1016/sword-play.jpg", "slug": "sword-play-ninja-slice-runner"}, {"name": "Red Light Green Light", "logo": "https://www.onlinegames.io/media/posts/1017/red-light-green-light.jpg", "slug": "red-light-green-light"}, {"name": "Apocalypse Truck", "logo": "https://www.onlinegames.io/media/posts/1015/apocalypse-truck.jpg", "slug": "apocalypse-truck"}, {"name": "PacXon New Realms", "logo": "https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg", "slug": "pacxon-new-realms"}, {"name": "Crazy Motorcycle", "logo": "https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg", "slug": "crazy-motorcycle"}, {"name": "Kick the Pirate", "logo": "https://www.onlinegames.io/media/posts/1012/Kick-The-Pirate.jpg", "slug": "kick-the-pirate"}, {"name": "Julie Beauty Salon", "logo": "https://www.onlinegames.io/media/posts/1011/Julie-Beauty-Salon.jpg", "slug": "julie-beauty-salon"}, {"name": "Tunnel Road", "logo": "https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg", "slug": "tunnel-road"}, {"name": "Thief Puzzle", "logo": "https://www.onlinegames.io/media/posts/1009/Thief-Puzzle.jpg", "slug": "thief-puzzle"}, {"name": "Mini Cars Racing", "logo": "https://www.onlinegames.io/media/posts/1010/Mini-Cars-Racing.jpg", "slug": "mini-cars-racing"}, {"name": "Crazy Cattle 3D", "logo": "https://www.onlinegames.io/media/posts/1004/Crazy-Cattle-3D.jpg", "slug": "crazy-cattle-3d"}, {"name": "Pyramid Solitaire", "logo": "https://www.onlinegames.io/media/posts/1006/pyramid-Solitaire.jpg", "slug": "pyramid-solitaire"}, {"name": "Solitaire", "logo": "https://www.onlinegames.io/media/posts/1007/solitaire.jpg", "slug": "solitaire"}, {"name": "Geometry Arrow", "logo": "https://www.onlinegames.io/media/posts/1005/Geometry-Arrow.jpg", "slug": "geometry-arrow"}, {"name": "Drift King", "logo": "https://www.onlinegames.io/media/posts/729/Drift-King.jpg", "slug": "drift-king"}, {"name": "Bloxd io", "logo": "https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg", "slug": "bloxd-io"}, {"name": "Love Tester", "logo": "https://www.onlinegames.io/media/posts/152/love-tester.jpg", "slug": "love-tester"}, {"name": "Highway Traffic", "logo": "https://www.onlinegames.io/media/posts/32/Highway-Traffic-2.jpg", "slug": "highway-traffic"}, {"name": "Extreme Run 3D", "logo": "https://www.onlinegames.io/media/posts/839/Extreme-Run-3D.jpg", "slug": "extreme-run-3d"}, {"name": "Golf Orbit", "logo": "https://www.onlinegames.io/media/posts/953/Golf-Orbit-Play-Online.jpg", "slug": "golf-orbit"}, {"name": "Miniblox io", "logo": "https://www.onlinegames.io/media/posts/595/MiniBlox.io.jpg", "slug": "miniblox-io"}, {"name": "Obby But You're on a Bike", "logo": "https://www.onlinegames.io/media/posts/885/obby-but-your-on-a-bike.jpg", "slug": "obby-but-youre-on-a-bike"}, {"name": "Crazy Plane Landing", "logo": "https://www.onlinegames.io/media/posts/999/crazy-plane-landing.jpg", "slug": "crazy-plane-landing"}, {"name": "Traffic Jam 3D", "logo": "https://www.onlinegames.io/media/posts/784/Traffic-Jam.jpg", "slug": "traffic-jam-3d"}, {"name": "Slope Rolling", "logo": "https://www.onlinegames.io/media/posts/961/Slope-Rolling.jpg", "slug": "slope-rolling"}, {"name": "Geometry Dash", "logo": "https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg", "slug": "geometry-dash"}, {"name": "Life Simulator", "logo": "https://www.onlinegames.io/media/posts/998/life-simulator.jpg", "slug": "life-simulator"}, {"name": "Fast Food Rush", "logo": "https://www.onlinegames.io/media/posts/979/fast-food-rush.jpg", "slug": "fast-food-rush"}, {"name": "Checkout Frenzy", "logo": "https://www.onlinegames.io/media/posts/974/checkout-frenzy-cashier-game.jpg", "slug": "checkout-frenzy"}, {"name": "Basketball Stars", "logo": "https://www.onlinegames.io/media/posts/380/Basketball-Stars-Game.jpg", "slug": "basketball-stars"}, {"name": "Stack Fire Ball", "logo": "https://www.onlinegames.io/media/posts/184/Stack-Fire-Ball-Game.jpg", "slug": "stack-fire-ball"}, {"name": "Drift Hunters 2", "logo": "https://www.onlinegames.io/media/posts/669/Drift-Hunters-2-Online.jpg", "slug": "drift-hunters-2"}, {"name": "Cube Worlds", "logo": "https://www.onlinegames.io/media/posts/986/Cube-Worlds.jpg", "slug": "cube-worlds"}, {"name": "Masked Special Forces", "logo": "https://www.onlinegames.io/media/posts/310/Masked-Special-Forces-FPS.jpg", "slug": "masked-special-forces"}, {"name": "Obby Tower Parkour Climb", "logo": "https://www.onlinegames.io/media/posts/943/obby-tower-parkour-climb.jpg", "slug": "obby-tower-parkour-climb"}, {"name": "Motor Tour", "logo": "https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg", "slug": "motor-tour"}, {"name": "Skribblio", "logo": "https://www.onlinegames.io/media/posts/385/Skribblio.jpg", "slug": "skribblio"}, {"name": "Vex X3M 2", "logo": "https://www.onlinegames.io/media/posts/984/Vex-X3M-2.jpg", "slug": "vex-x3m-2"}, {"name": "Paper io 2", "logo": "https://www.onlinegames.io/media/posts/395/Paper-io-2-Online.jpg", "slug": "paper-io-2"}, {"name": "Madalin Stunt Cars Pro", "logo": "https://www.onlinegames.io/media/posts/401/Madalin-Stunt-Cars-Pro-Game.jpg", "slug": "madalin-stunt-cars-pro"}, {"name": "Hoop World 3D", "logo": "https://www.onlinegames.io/media/posts/976/Hoop-World.jpg", "slug": "hoop-world-3d"}, {"name": "Basket Random", "logo": "https://www.onlinegames.io/media/posts/651/Basket-Random.jpg", "slug": "basket-random"}, {"name": "GTA Simulator", "logo": "https://www.onlinegames.io/media/posts/416/GTA-Simulator.jpg", "slug": "gta-simulator"}, {"name": "Gulper io", "logo": "https://www.onlinegames.io/media/posts/660/Gulper-io.jpg", "slug": "gulper-io"}, {"name": "Capybara Clicker Pro", "logo": "https://www.onlinegames.io/media/posts/554/Capybara-Clicker-Pro.jpg", "slug": "capybara-clicker-pro"}, {"name": "Real Flight Simulator", "logo": "https://www.onlinegames.io/media/posts/342/Real-Flight-Simulator-2.jpg", "slug": "real-flight-simulator"}, {"name": "TB World", "logo": "https://www.onlinegames.io/media/posts/948/TB-World-Toca-Boca.jpg", "slug": "tb-world"}, {"name": "Stickman Parkour", "logo": "https://www.onlinegames.io/media/posts/871/stickman-parkour-OG.jpg", "slug": "stickman-parkour"}, {"name": "Escape Car", "logo": "https://www.onlinegames.io/media/posts/1000/Escape-Car.jpg", "slug": "escape-car"}, {"name": "Smash Karts", "logo": "https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg", "slug": "smash-karts"}, {"name": "Drift Hunters Pro", "logo": "https://www.onlinegames.io/media/posts/397/Drift-Hunters-Pro.jpg", "slug": "drift-hunters-pro"}, {"name": "Five Nights at Poppy", "logo": "https://www.onlinegames.io/media/posts/992/Five-Nights-at-Poppy.jpg", "slug": "five-nights-at-poppy"}, {"name": "Stickman GTA City", "logo": "https://www.onlinegames.io/media/posts/900/stickman-gta-city-free.jpg", "slug": "stickman-gta-city"}, {"name": "Survival Race", "logo": "https://www.onlinegames.io/media/posts/768/Survival-Race.jpg", "slug": "survival-race"}, {"name": "Free City Drive", "logo": "https://www.onlinegames.io/media/posts/349/Free-City-Drive-Online.jpg", "slug": "free-city-drive"}, {"name": "Sprunki", "logo": "https://www.onlinegames.io/media/posts/911/Sprunki.jpg", "slug": "sprunki"}, {"name": "Granny", "logo": "https://www.onlinegames.io/media/posts/884/granny.jpg", "slug": "granny"}, {"name": "Five Nights At Freddy's 2", "logo": "https://www.onlinegames.io/media/posts/771/FNaF-2.jpg", "slug": "five-nights-at-freddys-2"}, {"name": "Pixel Driver", "logo": "https://www.onlinegames.io/media/posts/990/Pixel-Driver.jpg", "slug": "pixel-driver"}, {"name": "Get On Top", "logo": "https://www.onlinegames.io/media/posts/697/Get-on-Top.jpg", "slug": "get-on-top"}, {"name": "Minecraft Classic", "logo": "https://www.onlinegames.io/media/posts/382/Minecraft-Classic-Game.jpg", "slug": "minecraft-classic"}, {"name": "Unpacking", "logo": "https://www.onlinegames.io/media/posts/481/Unpacking.jpg", "slug": "unpacking"}, {"name": "Basket Hoop", "logo": "https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg", "slug": "basket-hoop"}, {"name": "Stickman Destruction", "logo": "https://www.onlinegames.io/media/posts/233/Stickman-Destruction.jpg", "slug": "stickman-destruction"}, {"name": "Rooftop Duel", "logo": "https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg", "slug": "rooftop-duel"}, {"name": "Spacebar Clicker", "logo": "https://www.onlinegames.io/media/posts/684/Spacebar-Clicker.jpg", "slug": "spacebar-clicker"}, {"name": "OvO", "logo": "https://www.onlinegames.io/media/posts/398/OvO-Game.jpg", "slug": "ovo"}, {"name": "Pacman 30th Anniversary", "logo": "https://www.onlinegames.io/media/posts/641/Pac-Man-30th-Anniversary.jpg", "slug": "pacman-30th-anniversary"}, {"name": "Fleeing the Complex", "logo": "https://www.onlinegames.io/media/posts/978/fleeing-complex.jpg", "slug": "fleeing-the-complex"}, {"name": "Papa's Sushiria", "logo": "https://www.onlinegames.io/media/posts/985/Papas-Sushiria.jpg", "slug": "papas-sushiria"}, {"name": "Crazy Strike Force", "logo": "https://www.onlinegames.io/media/posts/366/Crazy-Strike-Force.jpg", "slug": "crazy-strike-force"}, {"name": "Suroi", "logo": "https://www.onlinegames.io/media/posts/817/suroi.io.jpg", "slug": "suroi"}, {"name": "Carnage Battle Arena", "logo": "https://www.onlinegames.io/media/posts/987/carnage-battle-arena.jpg", "slug": "carnage-battle-arena"}, {"name": "A Small World Cup", "logo": "https://www.onlinegames.io/media/posts/909/a-small-world-cp.jpg", "slug": "a-small-world-cup"}, {"name": "Drift Boss", "logo": "https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg", "slug": "drift-boss"}, {"name": "Idle Breakout", "logo": "https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg", "slug": "idle-breakout"}, {"name": "Burnout City", "logo": "https://www.onlinegames.io/media/posts/861/burnoutcity.jpg", "slug": "burnout-city"}];
+
+    function surpriseMe() {
+      const randomGame = gamesData[Math.floor(Math.random() * gamesData.length)];
+      document.getElementById('surprise-img').src = randomGame.logo;
+      document.getElementById('surprise-name').textContent = randomGame.name;
+      document.getElementById('surprise-link').href = '/game/' + randomGame.slug + '.html';
+      document.getElementById('surprise-result').classList.remove('hidden');
+      document.getElementById('surprise-result').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+
+    // Category filter
+    const btns = document.querySelectorAll('.category-btn');
+    const cards = document.querySelectorAll('.game-card');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.category;
+        let visible = 0;
+        cards.forEach(card => {
+          if (cat === 'all' || card.dataset.category === cat) {
+            card.classList.remove('hidden-card');
+            visible++;
+          } else {
+            card.classList.add('hidden-card');
+          }
+        });
+        document.getElementById('no-games').classList.toggle('hidden', visible > 0);
+      });
+    });
+  </script>
+</body>
+</html>

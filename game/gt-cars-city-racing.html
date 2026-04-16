@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GT Cars City Racing - Car | MysteryGames</title>
+  <meta name="description" content="GT Cars City Racing is an exhilarating 3D driving adventure featuring split-screen multiplayer, GT supercars, and explosive sandbox mayhem! Race through Toy...">
+  <link rel="canonical" href="https://mysterygames.org/game/gt-cars-city-racing.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GT Cars City Racing - Free Online Game">
+  <meta property="og:description" content="GT Cars City Racing is an exhilarating 3D driving adventure featuring split-screen multiplayer, GT supercars, and explosive sandbox mayhem! Race through Toy...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "GT Cars City Racing",
+    "description": "GT Cars City Racing is an exhilarating 3D driving adventure featuring split-screen multiplayer, GT supercars, and explosive sandbox mayhem! Race through Toy City's physics playground with wild mini-ga",
+    "image": "https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg",
+    "url": "https://mysterygames.org/game/gt-cars-city-racing.html",
+    "genre": "Car",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Car" class="hover:text-blue-600">Car</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">GT Cars City Racing</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/60a97d022db7432eb82dd30fa7938e03/?gd_sdk_referrer_url=https://www.onlinegames.io/gt-cars-city-racing/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1019/gt-cars-city-racing.jpg" alt="GT Cars City Racing" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Car</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">GT Cars City Racing</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px"><strong style="color:#e74c3c;font-size:18px">GT Cars City Racing</strong><span style="font-size:16px"> is an exhilarating 3D driving adventure featuring split-screen multiplayer, GT supercars, and explosive sandbox mayhem! Race through <strong style="color:#3498db">Toy City</strong>'s physics playground with wild mini-games: demolish robots, launch into pools, collect diamonds, and topple buildings. Compete in <strong style="color:#e67e22">Face to Face</strong> races where your car changes every lap, or survive the <strong style="color:#9b59b6">Mega Ramps</strong> time trial against a destructive robot. Fully customize your ride with paint jobs, neon effects, and rim colors. </span></p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #f1c40f;padding-bottom:5px">Controls</h2><div style="display:flex;gap:30px;margin-bottom:20px"><div><h3 style="color:#e74c3c;font-size:16px;margin:0 0 8px">Player 1</h3><ul style="margin:0;padding-left:20px"><li style="margin-bottom:5px"><strong style="color:#3498db">Move:</strong> WASD</li><li style="margin-bottom:5px"><strong style="color:#3498db">Nitro:</strong> Shift</li><li style="margin-bottom:5px"><strong style="color:#3498db">Repair:</strong> R</li><li><strong style="color:#3498db">Camera:</strong> C</li></ul></div><div><h3 style="color:#e74c3c;font-size:16px;margin:0 0 8px">Player 2</h3><ul style="margin:0;padding-left:20px"><li style="margin-bottom:5px"><strong style="color:#3498db">Move:</strong> Arrow Keys</li><li style="margin-bottom:5px"><strong style="color:#3498db">Nitro:</strong> N</li><li style="margin-bottom:5px"><strong style="color:#3498db">Repair:</strong> U</li><li><strong style="color:#3498db">Camera:</strong> K</li></ul></div></div><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #f1c40f;padding-bottom:5px">Game Modes</h2><div style="background:#f9f9f9;padding:15px;border-radius:8px;margin-bottom:20px"><h3 style="color:#e67e22;font-size:18px;margin:0 0 10px">Toy City Sandbox</h3><p style="margin:0 0 10px">A vibrant playground with 7+ physics-based challenges:</p><ul style="columns:2;margin:0;padding-left:20px"><li style="margin-bottom:5px">💥 Smash giant robots</li><li style="margin-bottom:5px">🏊‍♂️ Ramp jumps into pools</li><li style="margin-bottom:5px">🏢 Topple building dominoes</li><li style="margin-bottom:5px">💎 Collect floating diamonds</li><li style="margin-bottom:5px">🌈 Fly through rainbow rings</li><li style="margin-bottom:5px">🎈 Explode balloon crates</li><li style="margin-bottom:5px">🎳 Bowling pin carnage</li></ul></div><div style="display:flex;gap:20px;margin-bottom:20px"><div style="flex:1;background:#e8f4fc;padding:15px;border-radius:8px"><h3 style="color:#2980b9;font-size:16px;margin:0 0 8px">Face to Face</h3><p style="margin:0">5-lap race with vehicle swaps each lap - adapt to win!</p></div><div style="flex:1;background:#fde8e8;padding:15px;border-radius:8px"><h3 style="color:#c0392b;font-size:16px;margin:0 0 8px">Mega Ramps</h3><p style="margin:0">Time trial with ramp jumps while dodging a killer robot!</p></div></div><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #f1c40f;padding-bottom:5px">Customization</h2><div style="background:#fff8e1;padding:15px;border-radius:8px;margin-bottom:20px"><ul style="columns:2;margin:0;padding-left:20px"><li style="margin-bottom:5px">🎨 50+ paint colors</li><li style="margin-bottom:5px">✨ Neon rim effects</li><li style="margin-bottom:5px">💨 Custom nitro trails</li><li style="margin-bottom:5px">🔮 Glowing windows</li></ul></div><p style="margin:0 0 15px">By <strong style="color:#16a085">GameVGames</strong> - masters of arcade racing madness! Try our other hit: <a href="https://www.onlinegames.io/crazy-car-arena/" style="color:#d35400;text-decoration:none"><strong>Crazy Car Arena</strong></a> for more stunt-driving chaos!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

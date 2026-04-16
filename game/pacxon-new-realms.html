@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PacXon New Realms - Arcade | MysteryGames</title>
+  <meta name="description" content="Remember Paxcon? The classic wall-closing puzzle from the 2000s? If the answer is a big yes, the wait is over my friend, because PacXon: New Realms is here...">
+  <link rel="canonical" href="https://mysterygames.org/game/pacxon-new-realms.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PacXon New Realms - Free Online Game">
+  <meta property="og:description" content="Remember Paxcon? The classic wall-closing puzzle from the 2000s? If the answer is a big yes, the wait is over my friend, because PacXon: New Realms is here...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "PacXon New Realms",
+    "description": "Remember Paxcon? The classic wall-closing puzzle from the 2000s? If the answer is a big yes, the wait is over my friend, because PacXon: New Realms is here now. And it's out and bolder than ever. In t",
+    "image": "https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg",
+    "url": "https://mysterygames.org/game/pacxon-new-realms.html",
+    "genre": "Arcade",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Arcade" class="hover:text-blue-600">Arcade</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">PacXon New Realms</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/727e29ac2f7a40e69a17dc7ff7f4c306/?gd_sdk_referrer_url=https://www.onlinegames.io/pacxon-new-realms/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1014/PaxCon-New-REalms.jpg" alt="PacXon New Realms" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Arcade</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">PacXon New Realms</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;line-height:1.6"><p style="margin:0 0 12px;color:#333">Remember Paxcon? The classic wall-closing puzzle from the 2000s? If the answer is a big yes, the wait is over my friend, because <strong style="color:#e74c3c">PacXon: New Realms</strong> is here now. And it's out and bolder than ever. In this sequel to arcade classic PacXon Deluxe, with a full-on expansion loaded with new realms, enemies, skins, and power-ups, you'll get that pixelated fun with a modern twist.</p><p style="margin:0 0 12px;color:#333">Conquer by drawing walls, dodge tricky mines, and carve out territory with style. It's part strategy, part action, and all satisfying (especially when you trap those pesky enemies in a corner and watch the progress bar tick up to 80%.) In case you're new to world of PacXon, here's a quick Arcade 101 refresher:</p><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">What is PacXon?</h2><p style="margin:0 0 12px;color:#333">PacXon (sometimes written as Pac-Xon) is a fun arcade-style puzzle game that mixes mechanics from classic games like Pac-Man and Xonix. In this <a href="https://www.onlinegames.io/t/fun/" style="color:#3498db;text-decoration:none">fun game</a>, you play as Pacxon, a little PacMan-like character, but instead of eating dots, your goal is to fill up the screen by building walls. As you move, Pacxon leaves a trail behind him. If you can successfully close off a section of the screen, that area becomes filled in. The goal is to fill at least 80% of the screen to complete the level. PacXon was originally a <a href="https://www.onlinegames.io/t/flash/" style="color:#3498db;text-decoration:none">Flash game</a> released in 2007, but 18 years later, an HTML5 version was published so it can be played online without plugins.</p><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">Controls</h2><ul style="margin:0 0 12px;padding-left:20px"><li style="margin-bottom:6px;color:#333"><strong style="color:#e74c3c">Arrow keys/ drag mouse: </strong>Move PacXon in four directions</li><li style="margin-bottom:6px;color:#333"><strong style="color:#e74c3c">Mouse swipe: </strong>For touchscreen and drag-based input</li></ul><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">How to Play PacXon: New Realms</h2><p style="margin:0 0 12px;color:#333">Your goal is to capture at least 80% of the field to move on. Yellow dots are shared open spaces, and orange dots are your territory. At the beginning of the level, all four sides are yours. You will run over open space to create a wall trail and loop back to a captured area to close the trail and claim that section. Then, it will turn into orange dots, marking your territory.</p><p style="margin:0 0 12px;color:#333">If an enemy touches you or your trail before you finish the loop, you lose a life. Keep track of your lives on the bottom left. Keep an eye on the progress bar at the top to know how close you are to finishing the level.</p><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">Types of Enemies</h2><p style="margin:0 0 12px;color:#333">Each level features ghostly enemies with different movement patterns. You'll need to study their patterns and strike at the right moment to grab territory without losing lives.</p><ul style="margin:0 0 12px;padding-left:20px"><li style="margin-bottom:6px;color:#333"><strong style="color:#e74c3c">Blue enemies:</strong> Move diagonally in captured zones.</li><li style="margin-bottom:6px;color:#333"><strong style="color:#e74c3c">Pink enemies: </strong>Move diagonally in open space.</li><li style="margin-bottom:6px;color:#333"><strong style="color:#e74c3c">Red enemies: </strong>The most aggressive: they move diagonally and destroy the walls you've built.</li></ul><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">Grab Power-Ups</h2><p style="margin:0 0 12px;color:#333">Collect sweet treats on the map for powerful boosts:</p><ul style="margin:0 0 12px;padding-left:20px"><li style="margin-bottom:6px;color:#333">🍬 <strong style="color:#e74c3c">(Candy): </strong>Eat enemies temporarily</li><li style="margin-bottom:6px;color:#333">🍩<strong style="color:#e74c3c"> (Donut): </strong>Speed boost</li><li style="margin-bottom:6px;color:#333">🍰 <strong style="color:#e74c3c">(Cake):</strong> Enemies move slower</li><li style="margin-bottom:6px;color:#333">🧁 <strong style="color:#e74c3c">(Cupcake):</strong> Enemies freeze for a short time</li></ul><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">PacXon New Realms Features</h2><ul style="margin:0 0 12px;padding-left:20px"><li style="margin-bottom:6px;color:#333">192 handcrafted levels across 4 distinct environments</li><li style="margin-bottom:6px;color:#333">Revamped UI with cleaner menus and game flow</li><li style="margin-bottom:6px;color:#333">Pixel-style visuals with adorable animations</li><li style="margin-bottom:6px;color:#333">New soundtrack with upbeat tunes for every zone</li><li style="margin-bottom:6px;color:#333">Character skins to unlock: 4 to 6 per world!</li><li style="margin-bottom:6px;color:#333">Enemies with unique AI patterns</li><li style="margin-bottom:6px;color:#333">Playable on desktop or mobile with intuitive controls</li></ul><h2 style="margin:16px 0 8px;color:#2c3e50;font-size:20px">Developer</h2><p style="margin:0 0 12px;color:#333">PacXon: New Realms is the official sequel to the beloved PacXon Deluxe. This upgraded version brings back the old-school challenge with a fresh look. It's distributed by Azerion Casual Games. You can play it online for free now at OnlineGames.io.</p><h3 style="margin:16px 0 8px;color:#2c3e50;font-size:18px">What to Play Next?</h3><p style="margin:0 0 12px;color:#333">Love the blend of retro vibes and quick reactions? Try <a href="https://www.onlinegames.io/google-pacman/" style="color:#3498db;text-decoration:none">Pac-Man 30th Anniversary</a>. It's a faithful tribute to the dot-munching, ghost-dodging original, now updated for browser play. It's perfect for fans of maze strategies and classic tension. Google PacMan is a full-blown pixel quest that's equal parts nostalgic and new. Play now!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

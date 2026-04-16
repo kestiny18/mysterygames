@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motor Tour - Bike | MysteryGames</title>
+  <meta name="description" content="Let's rev up your engines and zoom into motorbike races! Motor Tour is a free premium browser game that lets you hop on powerful motorbikes and race through...">
+  <link rel="canonical" href="https://mysterygames.org/game/motor-tour.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Motor Tour - Free Online Game">
+  <meta property="og:description" content="Let's rev up your engines and zoom into motorbike races! Motor Tour is a free premium browser game that lets you hop on powerful motorbikes and race through...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Motor Tour",
+    "description": "Let's rev up your engines and zoom into motorbike races! Motor Tour is a free premium browser game that lets you hop on powerful motorbikes and race through traffic, endless highways, and fierce one-o",
+    "image": "https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg",
+    "url": "https://mysterygames.org/game/motor-tour.html",
+    "genre": "Bike",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Bike" class="hover:text-blue-600">Bike</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Motor Tour</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/635b4ece400845cea372258dee3882b8/?gd_sdk_referrer_url=https://www.onlinegames.io/motor-tour/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/980/Motor-Tour.jpg" alt="Motor Tour" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Bike</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Motor Tour</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">Let's rev up your engines and zoom into motorbike races! <strong style="font-weight:700;color:#e74c3c;">Motor Tour</strong> is a free premium browser game that lets you hop on powerful motorbikes and race through traffic, endless highways, and fierce one-on-one showdowns. If you love traffic games, electrifying near misses, and tons of upgrades, then this one is for you. Feel the rush as you weave through roads, collect cash, nitrous or XP points on the road and leave your rivals in the dust. If you are a speed demon, start playing Motor Tour and immerse yourself in this epic experience!</p><p style="margin:10px 0 0;padding:0;font-size:16px;line-height:1.5;color:#333;">Roll out your ride, rev that engine, and show off your mad skills in Motor Tour. It's time to play this game online, take on races, and leave ordinary driving sims in the dust. Hit the road now, and get ready for the ride of your life!</p><h2 style="margin:20px 0 10px;padding:0;font-size:22px;color:#e74c3c;">Other Bike Games</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">If you enjoy Motor Tour, you might also like other <a href="https://www.onlinegames.io/t/traffic/" style="color:#3498db;text-decoration:underline;">highway traffic games</a> online on our site. One of the most popular bike traffic games is <a href="https://www.onlinegames.io/highway-moto/" style="color:#3498db;text-decoration:underline;">Highway Moto</a>. It really stands out with endless racing modes, cool bikes, premium 3d graphics and tight controls. Keep an eye on OnlineGames.io for more exciting titles to test your driving and reflexes!</p><h2 style="margin:20px 0 10px;padding:0;font-size:22px;color:#e74c3c;">Controls</h2><ul style="margin:0 0 0 20px;padding:0;list-style:none;"><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">W: </strong>Move Forward</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">A: </strong>Turn Left</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">D: </strong>Turn Right</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">S: </strong>Brake</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">Left Shift: </strong>Nitro Boost</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;"><strong style="font-weight:700;color:#e74c3c;">ESC: </strong>Go Back/Pause</li></ul><h2 style="margin:20px 0 10px;padding:0;font-size:22px;color:#e74c3c;">How to Play Motor Tour</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">You can start by selecting your favorite game mode: Career, Special Event, Endless, or Race. For beginners, it's a good idea to practice in endless mode first. You'll cruise down a busy highway until you crash, so it's perfect to get a feel for the bike's handling.</p><p style="margin:10px 0 0;padding:0;font-size:16px;line-height:1.5;color:#333;">Or you can try career mode where you'll tackle different missions under time pressure. It starts with relatively easy missions and the difficulty ramps up slowly. You can prove you can handle tight turns and avoid reckless drivers while collecting enough cash to unlock more upgrades. In Race mode, challenge tough AI opponents in an intense head-to-head showdown, collect nitrous on the road to gain an edge over your rival. Want something different? Special Event mode offers fun tasks and big loot rewards.</p><h2 style="margin:20px 0 10px;padding:0;font-size:22px;color:#e74c3c;">Game Features</h2><ul style="margin:0 0 0 20px;padding:0;list-style:none;"><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;" aria-level="1"><strong style="font-weight:700;color:#e74c3c;">40 Motorbikes: </strong>With 40 different bikes in the garage, you won't run out of choices. Each one has its own style, and you can show your personality by customizing your license plate. Represent your country with its flag, and write a cool message on the plate.</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;" aria-level="1"><strong style="font-weight:700;color:#e74c3c;">Deep Upgrades:</strong> Boost power, turbo, brakes, acceleration, handling, and nitro. Each upgrade helps you handle your bike better and improve overall performance. The best way to dominate the road is to keep enhancing those stats.</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;" aria-level="1"><strong style="font-weight:700;color:#e74c3c;">Multiple Game Modes: </strong>Pick from four main modes: Career, Special Event, Endless, or Race. Each one offers a new challenge, whether you love timed missions, intense races, or endless cruising.</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;" aria-level="1"><strong style="font-weight:700;color:#e74c3c;">Premium 3D Graphics:</strong> The game sports impressive visuals that make every ride feel realistic. From the shine on your motorbike to the detailed cityscape, you'll be drawn into the action.</li><li style="margin:5px 0;padding:0;font-size:16px;line-height:1.5;color:#333;" aria-level="1"><strong style="font-weight:700;color:#e74c3c;">Online Rewards:</strong> Motor Tour lets you watch ads to earn quick cash, gold, or blueprints. It might be worth it if you're in a hurry to get that new upgrade or unlock a new bike!</li></ul><h2 style="margin:20px 0 10px;padding:0;font-size:22px;color:#e74c3c;">Developer</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5;color:#333;">Motor Tour is developed by Wolves Interactive. They blended realistic bike physics, gorgeous 3D visuals offering a endless replay value.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

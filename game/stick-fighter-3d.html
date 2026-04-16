@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stick Fighter 3D - Stickman | MysteryGames</title>
+  <meta name="description" content="Stick Fighter 3D is a neon-style, 1v1 fighting game where two glowing stick figures battle in a side-view arena. Play solo against CPU or locally with a...">
+  <link rel="canonical" href="https://mysterygames.org/game/stick-fighter-3d.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stick Fighter 3D - Free Online Game">
+  <meta property="og:description" content="Stick Fighter 3D is a neon-style, 1v1 fighting game where two glowing stick figures battle in a side-view arena. Play solo against CPU or locally with a...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Stick Fighter 3D",
+    "description": "Stick Fighter 3D is a neon-style, 1v1 fighting game where two glowing stick figures battle in a side-view arena. Play solo against CPU or locally with a friend using the same keyboard. Control your st",
+    "image": "https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg",
+    "url": "https://mysterygames.org/game/stick-fighter-3d.html",
+    "genre": "Stickman",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Stickman" class="hover:text-blue-600">Stickman</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Stick Fighter 3D</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/gm/games3/stick-fighter-3d/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1026/stick-fighter-3d.jpg" alt="Stick Fighter 3D" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Stickman</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Stick Fighter 3D</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin-bottom:15px;font-size:16px"><span style="font-weight:bold;color:#ff6600">Stick Fighter 3D</span> is a <span style="color:#00ccff;text-shadow:0 0 5px #00ccff">neon-style</span>, 1v1 fighting game where two glowing stick figures battle in a side-view arena. <span style="font-weight:bold">Play solo against CPU or locally with a friend</span> using the same keyboard. Control your stickman to punch, kick, and perform <span style="color:#ff00ff">special moves</span> to KO your opponent! Each round ends when one player's health bar is depleted. With <span style="font-style:italic">flashy neon visuals</span> and smooth animations, this is stickman combat like never before!</p><h2 style="color:#ff6600;border-bottom:2px solid #ff6600;padding-bottom:5px;margin-top:20px">⚔️ Controls</h2><div style="display:flex;justify-content:space-between;margin-bottom:20px"><div style="width:48%"><p style="background:#ff9966;padding:8px;border-radius:5px;color:white;font-weight:bold">Player 1 (Orange)</p><ul style="list-style:none;padding-left:0"><li style="margin-bottom:5px"><span style="font-weight:bold">Move:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">A/D</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Jump:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">W</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Punch:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">F</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Kick:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">G</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Special:</span> <span style="background:#ffcc00;padding:2px 5px;border-radius:3px">R</span></li></ul></div><div style="width:48%"><p style="background:#6699ff;padding:8px;border-radius:5px;color:white;font-weight:bold">Player 2 (Blue)</p><ul style="list-style:none;padding-left:0"><li style="margin-bottom:5px"><span style="font-weight:bold">Move:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">←/→</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Jump:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">↑</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Punch:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">K</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Kick:</span> <span style="background:#eee;padding:2px 5px;border-radius:3px">L</span></li><li style="margin-bottom:5px"><span style="font-weight:bold">Special:</span> <span style="background:#ffcc00;padding:2px 5px;border-radius:3px">O</span></li></ul></div></div><h2 style="color:#ff6600;border-bottom:2px solid #ff6600;padding-bottom:5px;margin-top:20px">🎮 How to Play</h2><ul style="padding-left:20px;margin-bottom:20px"><li style="margin-bottom:8px">Choose <span style="font-weight:bold">1P (vs CPU)</span> or <span style="font-weight:bold">2P (vs Friend)</span> mode</li><li style="margin-bottom:8px">Deplete opponent's health using <span style="color:#ff6600">combos</span> of punches and kicks</li><li style="margin-bottom:8px"><span style="color:#ff00ff">Special moves</span> deal massive damage but require recharge</li><li style="margin-bottom:8px">Score points for each round won</li></ul><h2 style="color:#ff6600;border-bottom:2px solid #ff6600;padding-bottom:5px;margin-top:20px">💥 Special Moves</h2><p style="margin-bottom:20px">Each fighter has a <span style="font-weight:bold;color:#ff00ff">one-hit KO special</span> that activates when the charge bar is full. Watch for the flash indicator! But beware - your opponent can do the same. Time it perfectly for an instant victory!</p><h2 style="color:#ff6600;border-bottom:2px solid #ff6600;padding-bottom:5px;margin-top:20px">🎲 Similar Games</h2><p>Love competitive fighting? Try <a href="https://www.onlinegames.io/drunken-duel/" style="color:#ff6600;text-decoration:none;font-weight:bold">Drunken Duel</a> - a hilarious ragdoll fighting game with wobbly physics!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

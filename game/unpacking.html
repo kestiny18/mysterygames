@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unpacking - Cozy | MysteryGames</title>
+  <meta name="description" content="Hey there, neat freaks! We're offering you the perfect mess to tidy up! Unpacking is a free online home decoration puzzle you can play right in your...">
+  <link rel="canonical" href="https://mysterygames.org/game/unpacking.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Unpacking - Free Online Game">
+  <meta property="og:description" content="Hey there, neat freaks! We're offering you the perfect mess to tidy up! Unpacking is a free online home decoration puzzle you can play right in your...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/481/Unpacking.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Unpacking",
+    "description": "Hey there, neat freaks! We're offering you the perfect mess to tidy up! Unpacking is a free online home decoration puzzle you can play right in your browser. Just moved in? Time to unpack those boxes!",
+    "image": "https://www.onlinegames.io/media/posts/481/Unpacking.jpg",
+    "url": "https://mysterygames.org/game/unpacking.html",
+    "genre": "Cozy",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Cozy" class="hover:text-blue-600">Cozy</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Unpacking</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/d445590892294eebb41d983e1c598ab1/?gd_sdk_referrer_url=https://www.onlinegames.io/unpacking" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/481/Unpacking.jpg" alt="Unpacking" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Cozy</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Unpacking</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px;font-size:16px">Hey there, neat freaks! We're offering you the perfect mess to tidy up! <strong style="color:#e67e22;font-weight:700">Unpacking</strong> is a <span style="background-color:#f8f4e5;padding:2px 4px;border-radius:3px">free online home decoration puzzle</span> you can play right in your browser. Just moved in? Time to unpack those boxes!📦 As your mom always said: <em>"Everything has its place"</em>. Solve dozens of unpacking puzzles to create your dream home.</p><h2 style="color:#2c3e50;font-size:22px;margin:20px 0 10px;border-bottom:2px solid #eee;padding-bottom:5px">How to Play</h2><p style="margin:0 0 15px;font-size:16px">This place is a mess! We need your organizational skills. Properly arrange every item in its designated spot across 11 unique rooms.</p><h3 style="color:#e67e22;font-size:18px;margin:15px 0 10px">Unpacking Basics</h3><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px;font-size:15px">Select a room from the kitchen, bathroom, living room, bedroom, or garden</li><li style="margin-bottom:8px;font-size:15px">Drag items from the right-side panel to their proper locations</li><li style="margin-bottom:8px;font-size:15px">Correct placements will <span style="font-weight:700;color:#27ae60">lock automatically</span></li><li style="margin-bottom:8px;font-size:15px">Complete rooms under 90 seconds for <span style="color:gold">3-star rewards</span></li></ul><h3 style="color:#e67e22;font-size:18px;margin:15px 0 10px">Advanced Organization</h3><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px;font-size:15px">Arrange shelves and closets in <strong>Memory Mode</strong></li><li style="margin-bottom:8px;font-size:15px">Sort drawers in <strong>Classic Mode</strong> by matching items to correctly sized boxes</li><li style="margin-bottom:8px;font-size:15px">Group duplicate items together for efficiency</li></ul><h2 style="color:#2c3e50;font-size:22px;margin:20px 0 10px;border-bottom:2px solid #eee;padding-bottom:5px">Pro Tips</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px;font-size:15px">Start with large furniture first - beds before pillows!</li><li style="margin-bottom:8px;font-size:15px">Watch ads for helpful room previews when stuck</li><li style="margin-bottom:8px;font-size:15px">Think practically - TVs go across from sofas!</li></ul><h2 style="color:#2c3e50;font-size:22px;margin:20px 0 10px;border-bottom:2px solid #eee;padding-bottom:5px">Controls</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px;font-size:15px"><strong>PC:</strong> Click & drag with mouse</li><li style="margin-bottom:8px;font-size:15px"><strong>Mobile:</strong> Tap & drag items</li></ul><p style="margin:20px 0 0;font-size:16px;background-color:#f9f9f9;padding:15px;border-radius:5px">Perfect for cozy gaming sessions! Make some tea, grab a blanket, and enjoy this <span style="color:#e67e22">stress-free organization game</span>. Find more relaxing games at <a href="https://www.onlinegames.io/t/cozy/" style="color:#3498db;text-decoration:none;font-weight:700">OnlineGames.io</a>.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Dash - Arcade | MysteryGames</title>
+  <meta name="description" content="Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the world. No matter what, you need to keep the...">
+  <link rel="canonical" href="https://mysterygames.org/game/geometry-dash.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Geometry Dash - Free Online Game">
+  <meta property="og:description" content="Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the world. No matter what, you need to keep the...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Geometry Dash",
+    "description": "Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the world. No matter what, you need to keep the cube away from obstacles. For this, you nee",
+    "image": "https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg",
+    "url": "https://mysterygames.org/game/geometry-dash.html",
+    "genre": "Arcade",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Arcade" class="hover:text-blue-600">Arcade</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Geometry Dash</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://turbowarp.org/105500895/embed?autoplay&addons=remove-curved-stage-border" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/411/Geometry-Dash.jpg" alt="Geometry Dash" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Arcade</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Geometry Dash</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">Prepare yourself for the hardest! Geometry Dash is a very challenging arcade game, and it is famous all over the world. No matter what, you need to keep the cube away from obstacles. For this, you need to be agile. This game is a magnifying game, and you have to follow the rhythm of the music. The obstacles you encounter are in sync with the tempo of the music. So, turn up the volume and trust your ear. Now you are ready!</p><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">How to play Geometry Dash?</h2><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px;"><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Open OnlineGames.io from your web browser</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Search for Geometry Dash from the search icon in the upper right corner</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Enter the game and choose your game mode</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Start to play and jump over the obstacles by pressing spacebar.</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">The game controls of Geometry Dash are straightforward. Press your W key, Up arrow key or the Space key to jump. Use whichever feels more comfortable to you.</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">As you level up, you will taste new atmospheres as well as new vehicles. You can also control these vehicles with the arrow keys or WASD.</li></ul><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">Tips and Tricks</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">It is an undisputed fact that Geometry Dash is a difficult game. Each level you skip will double the difficulty of the game. Be ready for these. There are some suggestions we can give you during the process of getting used to the game.</p><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px;"><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">This is a rhythm-based game, and music makes the game more enjoyable. But if you think the music is distracting and making your job difficult at first, you may want to consider turning down the volume.</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Practice with caution. Because becoming accustomed to this game will take some time. Your reflexes and focus will be put to the test in Geometry Dash. But believe me, it is worth it!</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">If you are having trouble skipping a level, don't bother trying to get the coin at that level. Let's look at the following matches!</li></ul><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">Game Modes</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">Geometry Dash offers you three different game modes. These game modes are listed below according to their difficulty levels.</p><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px;"><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Stereo Madness</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Back on Track</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Polargeist</li></ul><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">When is Geometry Dash 2.2 coming out?</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">Geometry Dash's upcoming twelfth major upgrade, upgrade 2.2, is set to be published in October 2023.</p><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">When did Geometry Dash come out?</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">The game was published on iOS and Android on August 13, 2013, and on Steam on December 22, 2014. You now have the opportunity to play this game for free on OnlineGames.io via your browser!</p><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">Geometry Dash Controls</h2><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px;"><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">Space/Up arrow or W to jump over obstacles</li><li style="color:#555;font-size:15px;margin-bottom:8px;line-height:1.4;" aria-level="1">WASD or arrow keys to move the vehicle</li></ul><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">Developer</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">Geometry Dash was created by Griffpatch.</p><h2 style="color:#ff6600;font-size:22px;margin:20px 0 15px;">You May Also Like</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">If you found Geometry Dash fascinating, look for the <a href="https://www.onlinegames.io/t/arcade/" style="color:#0066cc;text-decoration:none;">Arcade Games</a> tag on OnlineGames.io or check out other games you might like, such as <a href="https://www.onlinegames.io/color-tunnel/" style="color:#0066cc;text-decoration:none;">Color Tunnel</a>, an exhilarating game just like Geometry Dash and the other quite challenging but enjoyable one is <a href="https://www.onlinegames.io/ovo/" style="color:#0066cc;text-decoration:none;">OvO</a>.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

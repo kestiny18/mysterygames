@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drift Boss - Drift | MysteryGames</title>
+  <meta name="description" content="Say hi to an easily controlled and captivating game! Drift Boss is a 3D driving game where you steer your little car over sharp bends. No brakes are holding...">
+  <link rel="canonical" href="https://mysterygames.org/game/drift-boss.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Drift Boss - Free Online Game">
+  <meta property="og:description" content="Say hi to an easily controlled and captivating game! Drift Boss is a 3D driving game where you steer your little car over sharp bends. No brakes are holding...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Drift Boss",
+    "description": "Say hi to an easily controlled and captivating game! Drift Boss is a 3D driving game where you steer your little car over sharp bends. No brakes are holding you. Drift through the corners and swing in",
+    "image": "https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg",
+    "url": "https://mysterygames.org/game/drift-boss.html",
+    "genre": "Drift",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Drift" class="hover:text-blue-600">Drift</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Drift Boss</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://www.onlinegames.io/games/2023/mjs/drift-boss/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/378/Drift-Boss-Game.jpg" alt="Drift Boss" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Drift</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Drift Boss</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0">Say hi to an easily controlled and captivating game! <strong style="font-family:var(--editor-font-family);font-size:inherit">Drift Boss</strong> is a 3D driving game where you steer your little car over sharp bends. No brakes are holding you. Drift through the corners and swing into high gear. The aim is to drive as long as possible without falling into space. Drift Boss makes such a deep addiction that you will be surprised how simple mechanics make this possible. Don't forget to share your highest score with us in the comment section below!</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">How to Play Drift Boss?</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li>Hit the start button and activate a booster if you have one.</li><li>Press the spacebar (or left click) to turn right and release the control to turn left.</li><li>The path you drive on has no ends, so you set your own goals.</li><li>Beat your highest score, or challenge your friends and be the boss of drifting!</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Drift Like a Boss: Boosters</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0">Three kinds of boosters are available in Drift Boss: Double score, car insurance, and coin rush. You can activate the boosters for only one run, and they will make your run easier for a while. You need to set the booster before driving.</p><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li><strong>Car Insurance: </strong>This booster will insure your car for one fall in a run. If you fall into space, you can continue where you left off by using your insurance.</li><li><strong>Double Score:</strong> This will double your score through the run.</li><li><strong>Coin Rush:</strong> This booster will fill your roads with coins. A great option if you are planning to buy a new vehicle.</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">How do I earn boosters in Drift Boss?</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li>you can buy them with your coins💰</li><li>you can turn the spin wheel and cross your fingers for the best 🎰</li><li>check in every day to take daily prizes🎁</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Need Some Tips?</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0">Here are the tips and tricks for Drift Boss:</p><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li>Don't steer too early. Wait until when you are close to the bend, then make your turn.</li><li>Are you frustrated falling down over and over? Try to buy a new vehicle; more expensive cars have better grip. Then, you will enjoy a longer ride without thinking about the sliding distance.</li><li>You can turn your car on the air if you come across a bend right after jumping.</li><li>Remember to get your daily rewards and practice. You will soon be an Ultimate Drift Boss!</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Features</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li>Easy controls and simple mechanics</li><li>Daily rewards and spin wins</li><li>Different boosters available</li><li>Range of vehicles to unlock</li><li>Mobile compatible</li><li>Completely free to play</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Controls</h2><ul style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0;padding-left:20px"><li><strong>Desktop: </strong>Press space or left click to turn right, release to steer left</li><li><strong>Mobile: </strong>Touch and hold the screen to turn right, and release it to turn left</li></ul><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Developer</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0">Drift Boss was created by MarketJS.</p><h2 style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-bold);margin:10px 0 5px">Similar Games</h2><p style="color:var(--text-primary-color);font-family:var(--editor-font-family);font-size:inherit;font-weight:var(--font-weight-normal);margin:0">Fan of endless games like Drift Boss? Head over to the <a href="https://www.onlinegames.io/t/endless/" style="color:var(--link-color);text-decoration:none">Endless Games</a> tag to find more. <a href="https://www.onlinegames.io/electron-dash/" style="color:var(--link-color);text-decoration:none">Electron Dash</a> is another game for the ones who trust their reflexes. Try it out, and let us know your opinions in the comments.</p></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

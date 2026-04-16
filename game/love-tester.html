@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Tester - Kids | MysteryGames</title>
+  <meta name="description" content="Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out...">
+  <link rel="canonical" href="https://mysterygames.org/game/love-tester.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Love Tester - Free Online Game">
+  <meta property="og:description" content="Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/152/love-tester.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Love Tester",
+    "description": "Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out your and your crush's names. Then, let the t",
+    "image": "https://www.onlinegames.io/media/posts/152/love-tester.jpg",
+    "url": "https://mysterygames.org/game/love-tester.html",
+    "genre": "Kids",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Kids" class="hover:text-blue-600">Kids</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Love Tester</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://www.onlinegames.io/games/2021/3/love-tester/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/152/love-tester.jpg" alt="Love Tester" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kids</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Love Tester</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;font-weight:400;color:#333;font-size:16px;line-height:1.5">Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out your and your crush's names. Then, let the tester do all the calculations about how much they love you, miss you during the day, or have any second thoughts about you. We have to warn you. You may not always get the results you hoped for. Hold your head up! You can always test your other crushes' names and reconsider someone you have been unsure about.</p><h2 style="margin:15px 0 10px;color:#e91e63;font-size:22px">How to Play Love Tester?</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:5px;font-weight:400;color:#333;font-size:16px;line-height:1.5">Open Love Tester on OnlineGames.io.</li><li style="margin-bottom:5px;font-weight:400;color:#333;font-size:16px;line-height:1.5">Enter your name and the name of the person whom you want to test the love of.</li><li style="margin-bottom:5px;font-weight:400;color:#333;font-size:16px;line-height:1.5">Hit the big heart at the center, and you will get the love calculator's compatibility results in seconds.</li></ul><p style="margin:0 0 15px;font-weight:400;color:#333;font-size:16px;line-height:1.5">You will see your results in percentages and get an evaluation of the potential associated with the couples you entered.</p><p style="margin:0 0 15px;font-weight:400;color:#333;font-size:16px;line-height:1.5">Maybe the result will encourage you! About expressing your love... 😉</p><h2 style="margin:15px 0 10px;color:#e91e63;font-size:22px">How to Know If Someone Loves You?</h2><p style="margin:0 0 15px;font-weight:400;color:#333;font-size:16px;line-height:1.5">Throughout history, people have been inclined and eager to receive insights into the future. Some consulted seers, some consulted tarot readers or stars... Especially in romantic matters, people have tried and are trying to relieve their desperation in these ways. If you need a test on how to know if someone loves you here is an online love tester for you. We can say that Love Tester is the 21st-century version of those ancient methods of fortune telling. Think of it like a computerized version of old tarot and oracle games.</p><h2 style="margin:15px 0 10px;color:#e91e63;font-size:22px">Is Love Tester True?</h2><p style="margin:0 0 15px;font-weight:400;color:#333;font-size:16px;line-height:1.5">We would really like to give you exact results on how much your loved one cares about you. However, you are the only person that can truly understand this. If you desperately want to know if someone has feelings for you or not, look at all the signals they are giving. Are they happy, cheerful and excited when you are with them? Trust your instincts on this. Remember, nothing can measure true love! It can only be felt. Just enjoy the Love Tester and have fun!</p><h2 style="margin:15px 0 10px;color:#e91e63;font-size:22px">What to Play Next?</h2><p style="margin:0;font-weight:400;color:#333;font-size:16px;line-height:1.5">You may continue to play our <a href="https://www.onlinegames.io/t/love/" style="color:#e91e63;text-decoration:none">Love Games</a> to have a great time online. Another popular love game is <a href="https://www.onlinegames.io/romantic-secret-kiss/" style="color:#e91e63;text-decoration:none">Romantic Secret Kiss</a>. Follow the link to try it out.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloxd io - Minecraft | MysteryGames</title>
+  <meta name="description" content="Welcome to Bloxd io, an ultimate online Minecraft game with diverse modes. Whether you're interested in peaceful building or intense PvP, Bloxd io...">
+  <link rel="canonical" href="https://mysterygames.org/game/bloxd-io.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bloxd io - Free Online Game">
+  <meta property="og:description" content="Welcome to Bloxd io, an ultimate online Minecraft game with diverse modes. Whether you're interested in peaceful building or intense PvP, Bloxd io...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Bloxd io",
+    "description": "Welcome to Bloxd io, an ultimate online Minecraft game with diverse modes. Whether you're interested in peaceful building or intense PvP, Bloxd io delivers!Choose from survival, building, battling, or",
+    "image": "https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg",
+    "url": "https://mysterygames.org/game/bloxd-io.html",
+    "genre": "Minecraft",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Minecraft" class="hover:text-blue-600">Minecraft</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Bloxd io</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://bloxd.io/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/722/Bloxd-io-Play.jpg" alt="Bloxd io" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Minecraft</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Bloxd io</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px"><span style="font-size:16px">Welcome to <strong style="color:#e74c3c">Bloxd io</strong>, an ultimate online <a href="https://www.onlinegames.io/t/minecraft/" style="color:#3498db;text-decoration:none">Minecraft game</a> with diverse modes. Whether you're interested in peaceful building or intense PvP, <span style="font-weight:700">Bloxd io</span> delivers!</p><p style="margin:0 0 20px">Choose from survival, building, battling, or mystery-solving modes. Play solo or with friends online.</p><h2 style="color:#2c3e50;font-size:20px;margin:25px 0 15px;border-bottom:2px solid #eee;padding-bottom:5px">Controls</h2><ul style="margin:0 0 20px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px"><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Move Forward: </strong>W</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Move Backward:</strong> S</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Move Left:</strong> A</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Move Right:</strong> D</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Run:</strong> Shift</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Break Block:</strong> Left Click</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Place Block:</strong> Right Click / E</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Open Inventory:</strong> Tab</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Drop Item:</strong> Q</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Jump:</strong> Space</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Crouch:</strong> Control / C</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Pick Block:</strong> Middle Mouse</li><li style="padding:5px 10px;background:#f8f9fa;border-radius:4px"><strong style="color:#e74c3c">Zoom:</strong> V</li></ul><h2 style="color:#2c3e50;font-size:20px;margin:25px 0 15px;border-bottom:2px solid #eee;padding-bottom:5px">Game Modes</h2><p style="margin:0 0 20px">Discover 6 exciting categories of gameplay:</p><h3 style="color:#e74c3c;font-size:18px;margin:20px 0 10px">Open World</h3><ul style="margin:0 0 20px;padding:0"><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Survival:</strong> <a href="https://www.onlinegames.io/t/survival/" style="color:#3498db;text-decoration:none">PvP</a> combat in an open world - collect resources and outlast others</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Peaceful:</strong> Creative building without PvP dangers</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Creative:</strong> Unlimited blocks and fly mode for ultimate building</li></ul><h3 style="color:#e74c3c;font-size:18px;margin:20px 0 10px">PvP Team</h3><ul style="margin:0 0 20px;padding:0"><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Bed Wars:</strong> Protect your team's bed while attacking others'</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Pirates:</strong> Naval combat destroying enemy ships</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Hide and Seek:</strong> Transform into blocks and evade seekers</li></ul><h3 style="color:#e74c3c;font-size:18px;margin:20px 0 10px">Building</h3><ul style="margin:0 0 20px;padding:0"><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">One Block:</strong> Start with one block and expand your world</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Doodle Cube:</strong> Theme-based building competitions</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Plots:</strong> Safe private building areas</li></ul><h3 style="color:#e74c3c;font-size:18px;margin:20px 0 10px">Free For All</h3><ul style="margin:0 0 20px;padding:0"><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Sky Wars:</strong> Battle royale on floating islands</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Infection:</strong> Zombie survival horror</li></ul><h3 style="color:#e74c3c;font-size:18px;margin:20px 0 10px">Special</h3><ul style="margin:0 0 20px;padding:0"><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Murder Mystery:</strong> Detective vs murderer gameplay</li><li style="margin:0 0 8px;padding-left:15px;position:relative"><strong style="color:#2c3e50">Worlds:</strong> Create custom game experiences</li></ul><h2 style="color:#2c3e50;font-size:20px;margin:25px 0 15px;border-bottom:2px solid #eee;padding-bottom:5px">More Games</h2><p style="margin:0 0 15px">Try <a href="https://www.onlinegames.io/miniblox-io/" style="color:#3498db;text-decoration:none">Miniblox</a> for more block-building fun!</p><h2 style="color:#2c3e50;font-size:20px;margin:25px 0 15px;border-bottom:2px solid #eee;padding-bottom:5px">Feedback</h2><p style="margin:0">Share your favorite modes and suggestions below!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy Motorcycle - Bike | MysteryGames</title>
+  <meta name="description" content="If Minecraft ever had a wild cousin who ditched mining for motorbikes, Crazy Motorcycle would be it. In this crazy bike game, you'll take a Minecraft-style...">
+  <link rel="canonical" href="https://mysterygames.org/game/crazy-motorcycle.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Crazy Motorcycle - Free Online Game">
+  <meta property="og:description" content="If Minecraft ever had a wild cousin who ditched mining for motorbikes, Crazy Motorcycle would be it. In this crazy bike game, you'll take a Minecraft-style...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Crazy Motorcycle",
+    "description": "If Minecraft ever had a wild cousin who ditched mining for motorbikes, Crazy Motorcycle would be it. In this crazy bike game, you'll take a Minecraft-style noob (we call him Nubik), give him a shiny m",
+    "image": "https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg",
+    "url": "https://mysterygames.org/game/crazy-motorcycle.html",
+    "genre": "Bike",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Bike" class="hover:text-blue-600">Bike</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Crazy Motorcycle</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/30637801603e46ec82b342b77f539cf3/?gd_sdk_referrer_url=https://www.onlinegames.io/crazy-motorcycle/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1013/Crazy-Motorcycle.jpg" alt="Crazy Motorcycle" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Bike</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Crazy Motorcycle</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5">If Minecraft ever had a wild cousin who ditched mining for motorbikes, <strong style="color:#e74c3c;font-weight:700">Crazy Motorcycle</strong> would be it. In this crazy bike game, you'll take a Minecraft-style noob (we call him Nubik), give him a shiny motorcycle, and drop into a floating obstacle course in the sky. There are no roads, no rules, and definitely no safety rails. Just pure blocky platformer. That's the energy this game brings.</p><p style="margin:10px 0 0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5">It's almost like a kid built a racetrack in creative mode, added a few too many stone walls and trees, and then dared you to race through it with a bike. You'll recognize the pixelated grass blocks, chunky trees, mossy stone pillars, ice blocks and floating islands. Even though the theme feels like it's pulled straight out of a <a href="https://www.onlinegames.io/t/minecraft/" style="color:#3498db;text-decoration:none">Minecraft</a> server, there's no building or mining mode here. Your job is to dodge, jump, and reach the red portal at the end of the level. And there's something extra funny about seeing this square-headed daredevil wipe out in the most dramatic ways. So start playing Crazy Motorcycle now, and then you'll want to play again and again.</p><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#2c3e50;font-size:18px">Controls</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5"><strong style="font-weight:700">PC:</strong></p><ul style="margin:5px 0;padding-left:20px;font-family:Arial,sans-serif;color:#333"><li style="margin:3px 0">Move: W / A / S / D or Arrow Keys</li><li style="margin:3px 0">Jump: Spacebar</li></ul><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5"><strong style="font-weight:700">Mobile:</strong></p><ul style="margin:5px 0;padding-left:20px;font-family:Arial,sans-serif;color:#333"><li style="margin:3px 0">Use the on-screen joystick and buttons to steer and jump.</li></ul><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#2c3e50;font-size:18px">How to Play Crazy Motorcycle</h2><ul style="margin:5px 0;padding-left:20px;font-family:Arial,sans-serif;color:#333"><li style="margin:3px 0">Your mission is to drive the noob to the red portal block without crashing.</li><li style="margin:3px 0">Each level is a floating track in the sky. If you fall off, you'll start from the last flag.</li><li style="margin:3px 0">You'll face tight turns, sudden jumps, moving obstacles and a forest of stone pillars and trees.</li><li style="margin:3px 0">Drive carefully without crashing your bike. The red target cube marks your finish line. Touch it to complete the level and unlock the next challenge.</li></ul><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#2c3e50;font-size:18px">Developer</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5">Crazy Motorcycle is a browser-based platformer game built by AM-Games. If you've played other "Noob" or voxel racing titles, you'll feel right at home. The developers focused on making a challenging but playful experience with short levels and instant retries.</p><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#2c3e50;font-size:18px">More Platformer Games You'll Love</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;line-height:1.5">If Crazy Motorcycle grabbed your attention, try<a href="https://www.onlinegames.io/obby-but-you-re-on-a-bike/" style="color:#3498db;text-decoration:none"> Obby But You're on a Bike</a>. It's another sky adventure where you ride and jump and try not to fall off platforms. But this time, it has a <a href="https://www.onlinegames.io/t/roblox/" style="color:#3498db;text-decoration:none">Roblox-inspired</a> theme instead of Minecraft. Perfect if you enjoy stunt games with a side of comedy.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

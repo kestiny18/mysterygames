@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket Hoop - Basketball | MysteryGames</title>
+  <meta name="description" content="In Basket Hoop, gravity is your only challenge, and tapping is your sole weapon. Your goal is simple make the ball jump and send it inside the hoop. The...">
+  <link rel="canonical" href="https://mysterygames.org/game/basket-hoop.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Basket Hoop - Free Online Game">
+  <meta property="og:description" content="In Basket Hoop, gravity is your only challenge, and tapping is your sole weapon. Your goal is simple make the ball jump and send it inside the hoop. The...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Basket Hoop",
+    "description": "In Basket Hoop, gravity is your only challenge, and tapping is your sole weapon. Your goal is simple make the ball jump and send it inside the hoop. The charm of the one button games peaks in Basket H",
+    "image": "https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg",
+    "url": "https://mysterygames.org/game/basket-hoop.html",
+    "genre": "Basketball",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Basketball" class="hover:text-blue-600">Basketball</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Basket Hoop</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/construct/311/basket-hoop/index-og.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/843/Basket-Hoop.jpg" alt="Basket Hoop" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Basket Hoop</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;padding:0;font-size:16px;line-height:1.5">In <strong style="font-weight:700;color:#333">Basket Hoop</strong>, gravity is your only challenge, and tapping is your sole weapon. Your goal is simple make the ball jump and send it inside the hoop. The charm of the one button games peaks in Basket Hoop online. Make as many baskets as you can in a limited amount of time. This game brings the same joy of playing Skeeball in arcade rooms, but with an extra: longer play sessions than you'd get with a single token.</p><h2 style="margin:15px 0 10px;font-size:20px;color:#222">Controls</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5"><strong style="font-weight:700;color:#333">Computer:</strong></p><p style="margin:0;padding:0;font-size:16px;line-height:1.5">Use your mouse to shoot the ball.</p><p style="margin:0;padding:0;font-size:16px;line-height:1.5"><strong style="font-weight:700;color:#333">Mobile:</strong></p><p style="margin:0;padding:0;font-size:16px;line-height:1.5">Tap to shoot the ball</p><h2 style="margin:15px 0 10px;font-size:20px;color:#222">How to Play Basket Hoop</h2><ul style="margin:0;padding-left:20px;list-style-type:disc"><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Tap or click on anywhere on the screen to dunk the ball.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">You can jump the ball mid-air as well. Control the angle to land the ball in the hoop.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">You have 5 seconds to make a score. If you miss a score within the time limit, the ball will return from the other side for another chance.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Each successful shot will create a new net in a different position for your next attempt.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Continue tapping to jump and shoot as many baskets as possible before the time runs out.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">If you run out of time without scoring enough baskets, restart and aim to beat your personal best!</li></ul><h3 style="margin:15px 0 10px;font-size:18px;color:#222">Ball Shop</h3><p style="margin:0;padding:0;font-size:16px;line-height:1.5">We know the game name is "Basket Hoop" and it takes place in a basketball field, but that doesn't mean you have to stick with a traditional ball! Explore the Ball Shop by tapping on the shop icon. You'll find 27 unlockable balls. From tennis balls and volleyballs to golf balls and Pokéballs, there's a wide range of choices that offer faster gameplay than the default ball. Use your in-game coins to purchase these unique options and complete your collection.</p><h2 style="margin:15px 0 10px;font-size:20px;color:#222">Tips and Tricks</h2><ul style="margin:0;padding-left:20px;list-style-type:disc"><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Pay close attention to the rhythm of your taps. Timing is key to making those perfect shots! At the beginning of the game you'll see the pathway the ball should follow for perfect shots. Try to stick with that path for high scores.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Try out different balls from the Ball Shop. Each type has its unique speed and trajectory, which can help you find the best fit for your playstyle.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Unlock new fields that comes with extra time limit. Even though you have five seconds to perform the dunk in the default field, you can unlock 5 more fields that come with extra seconds. Beating high scores will be much easier when you have more time.</li><li style="margin-bottom:5px;font-size:16px;line-height:1.5">Try to chain successful baskets together (streaks) for bonus points. The faster you score, the more points you'll rack up!</li></ul><h2 style="margin:15px 0 10px;font-size:20px;color:#222">Developer</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5">Basket Hoop was created by FreezeNova.</p><h2 style="margin:15px 0 10px;font-size:20px;color:#222">Compatibility</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5">Basket Hoop is perfectly compatible with mobile phones including iOS and Android. However if you'd like to play the game in portrait mode on your mobile, then try <a href="https://www.onlinegames.io/tap-tap-shots/" style="color:#0066cc;text-decoration:underline">Tap Tap Shots</a>.</p><h2 style="margin:15px 0 10px;font-size:20px;color:#222">More Online Sports Games</h2><p style="margin:0;padding:0;font-size:16px;line-height:1.5">Looking for even more fun? We got your back, take a look at the other <a href="https://www.onlinegames.io/t/sports/" style="color:#0066cc;text-decoration:underline">sports games</a> on Online Games.io! Soccer, football, tennis, pool and many other sports games await you!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

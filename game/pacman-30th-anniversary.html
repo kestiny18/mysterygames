@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacman 30th Anniversary - Blog | MysteryGames</title>
+  <meta name="description" content="document.addEventListener('DOMContentLoaded',function(){document.getElementById("toc-toggle1").addEventListener("click",touchHandler,false);document.getEleme...">
+  <link rel="canonical" href="https://mysterygames.org/game/pacman-30th-anniversary.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pacman 30th Anniversary - Free Online Game">
+  <meta property="og:description" content="document.addEventListener('DOMContentLoaded',function(){document.getElementById("toc-toggle1").addEventListener("click",touchHandler,false);document.getEleme...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/641/Pac-Man-30th-Anniversary.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Pacman 30th Anniversary",
+    "description": "document.addEventListener('DOMContentLoaded',function(){document.getElementById("toc-toggle1").addEventListener("click",touchHandler,false);document.getElementById("toc-toggle2").addEventListener("cli",
+    "image": "https://www.onlinegames.io/media/posts/641/Pac-Man-30th-Anniversary.jpg",
+    "url": "https://mysterygames.org/game/pacman-30th-anniversary.html",
+    "genre": "Blog",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Blog" class="hover:text-blue-600">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Pacman 30th Anniversary</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://www.onlinegames.io/games/2024/more/tapman/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/641/Pac-Man-30th-Anniversary.jpg" alt="Pacman 30th Anniversary" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Blog</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Pacman 30th Anniversary</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><p style="margin:0;padding:0"><script defer="defer" style="display:none">document.addEventListener('DOMContentLoaded',function(){document.getElementById("toc-toggle1").addEventListener("click",touchHandler,false);document.getElementById("toc-toggle2").addEventListener("click",touchHandler,false);var tableBox=document.getElementById("toc-box");function touchHandler(e){tableBox.classList.toggle("toc-box-open")}});</script></p><p style="font-style:italic;color:#ffcc00;font-size:18px;margin:10px 0">Who's not afraid of ghosts? Pac-Man is!</p><p style="color:#ffffff;line-height:1.5;margin:10px 0">In the neon glow of 1980s arcades, a legendary yellow hero was born - shaped like a pizza missing a slice! While ghosts may scare him at first, power pellets turn the tables in this timeless chase. Creator Toru Iwatani crafted Pac-Man's relationship with the ghosts to mirror the classic Tom & Jerry dynamic.</p><p style="color:#ffffff;line-height:1.5;margin:10px 0">Celebrating 30 years of wakka-wakka magic, Google immortalized Pac-Man as an interactive Doodle - complete with the Google logo cleverly hidden in the maze! This special edition features enhanced graphics and browser accessibility, bringing retro arcade thrills to modern players.</p><p style="color:#ffffff;line-height:1.5;margin:10px 0">Ready to master the maze? Our ultimate guide unlocks everything: gameplay secrets, fascinating trivia, world records, and answers to burning questions about both the classic and Google Doodle versions of this iconic game.</p><h3 id="toc-toggle2" style="color:#ffcc00;cursor:pointer;margin:15px 0">▼ Table of Contents</h3><ul style="list-style:none;padding-left:20px;margin:10px 0"><li style="margin:5px 0"><a href="#30thanniversary" style="color:#ffcc00;text-decoration:none">• Pacman 30th Anniversary</a></li><li style="margin:5px 0"><a href="#howToPlay" style="color:#ffcc00;text-decoration:none">• How to Play</a></li><li style="margin:5px 0"><a href="#controls" style="color:#ffcc00;text-decoration:none">• Controls</a></li><li style="margin:5px 0"><a href="#2Player" style="color:#ffcc00;text-decoration:none">• 2-Player Mode</a></li><li style="margin:5px 0"><a href="#fame" style="color:#ffcc00;text-decoration:none">• Pac-Man's Legacy</a></li><li style="margin:5px 0"><a href="#faq" style="color:#ffcc00;text-decoration:none">• FAQ</a></li></ul><h2 id="30thanniversary" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">Pacman 30th Anniversary</h2><h2 id="howToPlay" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">How to Play Pac-Man</h2><ul style="color:#ffffff;line-height:1.5;padding-left:20px;margin:10px 0"><li>Guide the yellow hero through mazes to collect all dots while avoiding colorful ghosts</li><li>Power pellets turn ghosts blue - chase and eat them for bonus points!</li><li>Collect fruits for extra points as difficulty increases each level</li><li>Master ghost patterns to achieve high scores and break records</li></ul><h2 id="controls" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">Controls</h2><ul style="color:#ffffff;line-height:1.5;padding-left:20px;margin:10px 0"><li><strong>Arrow Keys:</strong> Move Pac-Man</li><li><strong>WASD:</strong> Control Ms. Pac-Man (2-player mode)</li><li><strong>Click:</strong> Insert Coin</li></ul><h2 id="2Player" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">2-Player Mode</h2><h2 style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">Pac-Man's Cultural Impact</h2><ul style="color:#ffffff;line-height:1.5;padding-left:20px;margin:10px 0"><li>Inspired hit song "Pac-Man Fever" and countless merchandise</li><li>Coined the "Pac-Man defense" business strategy term</li><li>Inducted into The Strong Museum's Hall of Fame (2015)</li><li>Google Doodle version caused $122M in lost productivity!</li></ul><h3 id="funFacts" style="color:#ffcc00;margin:15px 0 10px">Did You Know?</h3><ul style="color:#ffffff;line-height:1.5;padding-left:20px;margin:10px 0"><li>Originally called "Puck Man" in Japan</li><li>Character design inspired by a pizza missing a slice</li><li>Holds 11 Guinness World Records</li></ul><h2 id="faq" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">FAQ</h2><h3 id="whatis" style="color:#ffcc00;margin:15px 0 10px">What's the Google Doodle version?</h3><p style="color:#ffffff;line-height:1.5;margin:10px 0">A 2010 anniversary edition with enhanced graphics playable directly in your browser.</p><h3 id="level256" style="color:#ffcc00;margin:15px 0 10px">What's special about Level 256?</h3><p style="color:#ffffff;line-height:1.5;margin:10px 0">The infamous "kill screen" caused by technical limitations creates a glitched, nearly impossible challenge.</p><h2 id="last" style="color:#ffcc00;border-bottom:2px solid #ffcc00;padding-bottom:5px;margin:20px 0 10px">Game Over?</h2><p style="color:#ffffff;line-height:1.5;margin:10px 0">Pac-Man's legacy continues to eat its way through pop culture. Ready for more arcade action? Discover countless free games at <a href="https://www.onlinegames.io/t/arcade/" style="color:#ffcc00;text-decoration:underline">OnlineGames.io</a>!</p></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

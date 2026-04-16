@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Orbit - Sports | MysteryGames</title>
+  <meta name="description" content="Golf Orbit is an online golf game where one powerful shot can send your ball flying across the course and even into outer space! With just a single tap, you...">
+  <link rel="canonical" href="https://mysterygames.org/game/golf-orbit.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Golf Orbit - Free Online Game">
+  <meta property="og:description" content="Golf Orbit is an online golf game where one powerful shot can send your ball flying across the course and even into outer space! With just a single tap, you...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/953/Golf-Orbit-Play-Online.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Golf Orbit",
+    "description": "Golf Orbit is an online golf game where one powerful shot can send your ball flying across the course and even into outer space! With just a single tap, you can launch the ball as far as possible, col",
+    "image": "https://www.onlinegames.io/media/posts/953/Golf-Orbit-Play-Online.jpg",
+    "url": "https://mysterygames.org/game/golf-orbit.html",
+    "genre": "Sports",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Sports" class="hover:text-blue-600">Sports</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Golf Orbit</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/02ff01e6e9f7451ba28d889a2a55eec9/?gd_sdk_referrer_url=https://www.onlinegames.io/golf-orbit/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/953/Golf-Orbit-Play-Online.jpg" alt="Golf Orbit" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Sports</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Golf Orbit</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;line-height:1.6"><p style="margin-bottom:15px"><strong style="color:#2E86C1;font-size:18px">Golf Orbit</strong><span style="color:#333"> is an online golf game where one powerful shot can send your ball flying across the course and even into outer space! With just a single tap, you can launch the ball as far as possible, collect coins, and upgrade your golfer's abilities. The goal is to hit the ball farther with each shot. Just try not to land in a bunker, smack into a tree, take a surprise bath in the water... or, you know, get snatched by an eagle or abducted by a UFO. Weird things may happen in Golf Orbit. ⛳</span></p><h2 style="color:#2E86C1;border-bottom:2px solid #2E86C1;padding-bottom:5px;margin-top:20px">Controls</h2><p style="margin-bottom:10px"><strong style="color:#E74C3C">On Computers</strong></p><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px"><li style="margin-bottom:5px;color:#333">Click or tap when the arrow is in the green zone for a perfect shot.</li><li style="margin-bottom:5px;color:#333">If the ball stops near the hole, hold the left click to aim and release to putt.</li></ul><h2 style="color:#2E86C1;border-bottom:2px solid #2E86C1;padding-bottom:5px;margin-top:20px">How to Play Golf Orbit</h2><p style="margin-bottom:15px;color:#333">Your goal in Golf Orbit is to launch the ball as far as possible and, if you're lucky (or just really good), sink it into the hole.</p><p style="margin-bottom:15px;color:#333">When you start a round, a swing meter appears, moving back and forth like a metronome. There's a green zone in the middle, this is where you want to stop the meter for a perfect stroke. Tap at the right moment, and your golfer will send the ball soaring.</p><p style="margin-bottom:15px;color:#333">As the ball flies, it might bounce off trees, roll into bunkers, or take an unexpected dive into the water. If it stops close to the hole, you get a second shot. This time, the mechanics change: instead of a timing-based meter, you'll see an arrow indicating the ball's path. Tap and release at the right moment to sink the putt.</p><h3 style="color:#E67E22;margin-top:15px;margin-bottom:10px">Score a Hole-In-One</h3><p style="margin-bottom:15px;color:#333">Landing a hole-in-one is the ultimate goal in Golf Orbit, and if you pull it off, you'll be rewarded generously. If you manage to send the ball straight into the hole in a single shot, you'll score an eagle, multiplying your earnings by 10x. This means a massive coin boost, allowing you to upgrade your golfer faster and hit even farther in the next round.</p><p style="margin-bottom:15px;color:#333">However, not every shot is perfect. If your ball lands near the hole, you'll get a second chance. At this point, a more precise aiming mechanic kicks in—you'll see a guiding arrow showing the ball's path. Tap to set your shot and release at the right moment to putt the ball into the hole. If you make it on the second attempt, you'll score a birdie, which triples your earnings.</p><h3 style="color:#E67E22;margin-top:15px;margin-bottom:10px">Upgrade The Stroke</h3><p style="margin-bottom:10px;color:#333">Coins earned from each round can be spent on three key upgrades:</p><ul style="list-style-type:disc;padding-left:20px;margin-bottom:15px"><li style="margin-bottom:5px;color:#333"><strong style="color:#2E86C1">Strength:</strong> Boosts your golfer's power for stronger swings.</li><li style="margin-bottom:5px;color:#333"><strong style="color:#2E86C1">Speed:</strong> Makes the ball travel through the air faster.</li><li style="margin-bottom:5px;color:#333"><strong style="color:#2E86C1">Bounce:</strong> Increases how far the ball rebounds off surfaces.</li></ul><p style="margin-bottom:15px;color:#333">Upgrading these abilities is key to hitting longer shots and setting new records. The farther you hit the ball, the more coins you collect, allowing you to improve your stats even further.</p><p style="margin-bottom:15px;color:#333">The challenge increases as you go, with more difficult landscapes and obstacles appearing. Trees, sand traps, and water hazards can slow you down or stop your progress, so learning the best angles and power levels is important. Timing your swing perfectly is the key to mastering the game.</p><h3 style="color:#27AE60;margin-top:15px;margin-bottom:10px">Ready to Become a Golf Champion?</h3><p style="margin-bottom:15px;color:#333">If you love fun and simple golf games, Golf Orbit is the perfect game for you. Challenge yourself to hit new distance records, upgrade your golfer, and try to land the perfect hole-in-one. Play for free now on OnlineGames.io! If you're looking for other <a href="https://www.onlinegames.io/t/sports/" style="color:#2E86C1;text-decoration:none">sports games online</a>, we have a great collection of them. Explore them all now!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

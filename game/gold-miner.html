@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Miner - Flash | MysteryGames</title>
+  <meta name="description" content="Gold Miner is a legendary flash game where you drop your claw, grab gold, and haul it up before time runs out. It's like fishing with a rod, except you're...">
+  <link rel="canonical" href="https://mysterygames.org/game/gold-miner.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gold Miner - Free Online Game">
+  <meta property="og:description" content="Gold Miner is a legendary flash game where you drop your claw, grab gold, and haul it up before time runs out. It's like fishing with a rod, except you're...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1027/gold-miner.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Gold Miner",
+    "description": "Gold Miner is a legendary flash game where you drop your claw, grab gold, and haul it up before time runs out. It's like fishing with a rod, except you're catching shiny rocks instead of fish. Each le",
+    "image": "https://www.onlinegames.io/media/posts/1027/gold-miner.jpg",
+    "url": "https://mysterygames.org/game/gold-miner.html",
+    "genre": "Flash",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Flash" class="hover:text-blue-600">Flash</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Gold Miner</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/flash/gold-miner/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1027/gold-miner.jpg" alt="Gold Miner" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Flash</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Gold Miner</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px"><strong style="color:#d4af37;font-size:18px">Gold Miner</strong><span style="font-size:16px"> is a legendary flash game where you drop your claw, grab gold, and haul it up before time runs out. It's like fishing with a rod, except you're catching shiny rocks instead of fish. Each level gives you a money goal - collect treasures like gold and diamonds while avoiding worthless rocks. Make smart buys in the shop between rounds. One wrong drop and your claw wastes precious time on a boulder. Yet you'll keep coming back for more - this browser game has kept its charm for decades!</span></p><h2 style="color:#d4af37;margin:20px 0 10px;font-size:18px;border-bottom:1px solid #eee;padding-bottom:5px">Controls</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px"><strong style="color:#d4af37">Drop Claw: </strong><span>Press <span style="background:#f0f0f0;padding:2px 5px;border-radius:3px">↓</span> when the swinging claw is lined up</span></li><li style="margin-bottom:8px"><strong style="color:#d4af37">Toss Dynamite: </strong><span>Press <span style="background:#f0f0f0;padding:2px 5px;border-radius:3px">↑</span> to discard unwanted items</span></li></ul><h2 style="color:#d4af37;margin:20px 0 10px;font-size:18px;border-bottom:1px solid #eee;padding-bottom:5px">How to Play</h2><p style="margin:0 0 15px"><span style="font-size:16px">Time your claw drops to grab valuables - big items take longer but small gold is quicker. Each level has a timer and money goal. Accidentally hooked a rock? Use limited dynamite (costs money) to blow it up!</span></p><h2 style="color:#d4af37;margin:20px 0 10px;font-size:18px;border-bottom:1px solid #eee;padding-bottom:5px">Shop Items</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px"><strong style="color:#d4af37">Dynamite ($51): </strong><span>Discard worthless items when seconds count</span></li><li style="margin-bottom:8px"><strong style="color:#d4af37">Lucky Clover ($14):</strong><span> Boosts mystery bag rewards for one level</span></li><li style="margin-bottom:8px"><strong style="color:#d4af37">Diamond Polish ($286): </strong><span>Increases diamond value next level</span></li></ul><h2 style="color:#d4af37;margin:20px 0 10px;font-size:18px;border-bottom:1px solid #eee;padding-bottom:5px">History</h2><p style="margin:0 0 15px"><span style="font-size:16px">Created by GameRival in 2003, this Flash classic has been revived for modern browsers. Play free on <a href="https://www.onlinegames.io" style="color:#d4af37;text-decoration:none">OnlineGames.io</a> and explore other nostalgic <a href="https://www.onlinegames.io/t/flash/" style="color:#d4af37;text-decoration:none">Flash games</a> like Duck Life and Henry Stickmin.</span></p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

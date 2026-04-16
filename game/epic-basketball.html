@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epic Basketball - Basketball | MysteryGames</title>
+  <meta name="description" content="Epic Basketball is a fun and quirky street-style sports game you can play right in your browser. It's all about how many baskets you can sink in just 60...">
+  <link rel="canonical" href="https://mysterygames.org/game/epic-basketball.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Epic Basketball - Free Online Game">
+  <meta property="og:description" content="Epic Basketball is a fun and quirky street-style sports game you can play right in your browser. It's all about how many baskets you can sink in just 60...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Epic Basketball",
+    "description": "Epic Basketball is a fun and quirky street-style sports game you can play right in your browser. It's all about how many baskets you can sink in just 60 seconds. If a basketball shootout game sounds t",
+    "image": "https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg",
+    "url": "https://mysterygames.org/game/epic-basketball.html",
+    "genre": "Basketball",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Basketball" class="hover:text-blue-600">Basketball</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Epic Basketball</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2024/shareddreams/epic-basketball/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1023/epic-basketball.jpg" alt="Epic Basketball" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Basketball</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Epic Basketball</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px"><strong style="color:#e74c3c;font-size:1.2em">Epic Basketball</strong><span style="font-size:0.95em"> is a fun and quirky street-style sports game you can play right in your browser. It's all about how many baskets you can sink in just 60 seconds. If a basketball shootout game sounds too easy, think again because this hoop doesn't like to stay in one spot, and distractions are everywhere. Stay sharp, aim true, and shoot your shot!</span></p><h2 style="color:#2c3e50;margin:20px 0 10px;font-size:1.3em;border-bottom:2px solid #f1c40f;padding-bottom:5px">Controls</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px"><strong style="color:#3498db">Desktop: </strong><span style="font-size:0.9em">Hold down the left mouse button, drag to aim, and release to shoot.</span></li><li style="margin-bottom:8px"><strong style="color:#3498db">Mobile: </strong><span style="font-size:0.9em">Tap and drag on the screen to set your angle release to launch the ball.</span></li></ul><h2 style="color:#2c3e50;margin:20px 0 10px;font-size:1.3em;border-bottom:2px solid #f1c40f;padding-bottom:5px">How to Play Epic Basketball</h2><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:8px;font-size:0.9em">You start by picking your player. At first, you'll play as Javi, a funky street baller with big hair and big dreams.</li><li style="margin-bottom:8px;font-size:0.9em">Once you're on the court, you'll face a single hoop. You have 60 seconds to begin with. Your goal is to score as many points as possible before time runs out.</li><li style="margin-bottom:8px;font-size:0.9em">Scoring isn't the only challenge. Each time you make a basket, the hoop moves. Sometimes farther, sometimes higher. You'll have to adjust your aim and force. The game uses a dotted arc to help you plan your shot, but mastering the rhythm takes practice.</li><li style="margin-bottom:8px;font-size:0.9em">A small extra hoop sometimes appears on the screen. If you score while it's active, you get bonus time!</li></ul><h2 style="color:#2c3e50;margin:20px 0 10px;font-size:1.3em;border-bottom:2px solid #f1c40f;padding-bottom:5px">Unlock Epic Basketball Players</h2><p style="margin:0 0 15px;font-size:0.95em">Start with Javi and unlock more colorful players like Plin Plin, Bubu, Patty Wally, Bruce, Alien, Neil, Imhotep and more. Each character has their own personality and look, but the real prize is Nona. She may look like a grandma, but she's the ultimate baller. To unlock Nona, you'll need to score 300 points. That's not easy, so get practicing!</p><h2 style="color:#2c3e50;margin:20px 0 10px;font-size:1.3em;border-bottom:2px solid #f1c40f;padding-bottom:5px">Next Play</h2><p style="margin:0;font-size:0.95em">If you enjoyed Epic Basketball's energy and fun visuals, you'll love playing <a href="https://www.onlinegames.io/basket-random/" style="color:#e74c3c;text-decoration:none;font-weight:bold">Basket Random</a>. It's a 2-player basketball game with pixel characters and fast matches. Great for when you want to take your skills to an even funnier court with wicked physics.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

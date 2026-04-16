@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Karts - Kart | MysteryGames</title>
+  <meta name="description" content="Imagine a 3D multiplayer go-kart bonanza where the track isn't just for racing, but for full-on vehicular mayhem! Welcome to Smash Karts, where elegance...">
+  <link rel="canonical" href="https://mysterygames.org/game/smash-karts.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Smash Karts - Free Online Game">
+  <meta property="og:description" content="Imagine a 3D multiplayer go-kart bonanza where the track isn't just for racing, but for full-on vehicular mayhem! Welcome to Smash Karts, where elegance...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Smash Karts",
+    "description": "Imagine a 3D multiplayer go-kart bonanza where the track isn't just for racing, but for full-on vehicular mayhem! Welcome to Smash Karts, where elegance meets anarchy, and every turn could lead to eit",
+    "image": "https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg",
+    "url": "https://mysterygames.org/game/smash-karts.html",
+    "genre": "Kart",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Kart" class="hover:text-blue-600">Kart</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Smash Karts</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://smashkarts.io/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/373/smash-karts-online.jpg" alt="Smash Karts" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kart</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Smash Karts</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;line-height:1.5;color:#333"><p style="margin:0 0 15px 0;font-size:16px">Imagine a 3D multiplayer go-kart bonanza where the track isn't just for racing, but for full-on vehicular mayhem! Welcome to <strong style="color:#e74c3c">Smash Karts</strong>, where elegance meets anarchy, and every turn could lead to either a victory parade or a spectacular kart-smashing spectacle.</p><p style="margin:0 0 15px 0;font-size:16px">Smash Karts is a online driving battle game, as you hit the start button, you're zooming through a kaleidoscope of maps, from candyland nightmares to neon-lit cityscapes. But it's not just about who crosses the finish line first; it's about who remains un-smashed! You'll encounter a barrage of weaponry from your fellow kart jockeys—guns, missiles, mines, and yes, even nukes. Your mission? Stay alive, smash others, and rack up those sweet, sweet XP points. Just keep an eye out for those gift boxes; they're your lifeline for arming up with random weapons.</p><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">Controls</h2><ul style="margin:0 0 15px 0;padding-left:20px"><li style="margin-bottom:5px"><strong style="color:#3498db">Up Arrow or W:</strong> Gas</li><li style="margin-bottom:5px"><strong style="color:#3498db">Down Arrow or S:</strong> Brake</li><li style="margin-bottom:5px"><strong style="color:#3498db">Left Arrow or A:</strong> Steer Left</li><li style="margin-bottom:5px"><strong style="color:#3498db">Right Arrow or D:</strong> Steer Right</li><li style="margin-bottom:5px"><strong style="color:#3498db">Space:</strong> Fire</li></ul><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">How to Play Smash Karts</h2><ul style="margin:0 0 15px 0;padding-left:20px"><li style="margin-bottom:5px">Head over to OnlineGames.io, find Smash Karts, and dive in by clicking that big, shiny "Play" button.</li><li style="margin-bottom:5px">Use your arrow keys or WASD to steer, but remember, in this game, driving straight might be the quickest way to your kart's funeral.</li><li style="margin-bottom:5px">Collect those question-marked boxes for a surprise weapon. You only carry one at a time, so choose your moments wisely. Got a mine? Drop it where the traffic's thickest. Gun or nuke? Aim true and obliterate the competition.</li><li style="margin-bottom:5px">Each box you drive through is like a Christmas present from a slightly unhinged Santa. Mines, nukes, guns—oh my! Use them to climb that leaderboard.</li><li style="margin-bottom:5px">If you're the last kart standing, you win! It's like musical chairs, but with more explosions.</li><li style="margin-bottom:5px">Earn coins and gems to deck out your kart with the craziest skins and characters. Fancy a clown driving a disco ball kart? Here's your chance.</li></ul><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">Game Modes Explained</h2><p style="margin:0 0 15px 0;font-size:16px">There are three game modes you can choose in custom multiplayer rooms. Apart from modes you can enable teams, set round duration between 3 to 20 mins, customize weapons and more.</p><ul style="margin:0 0 15px 0;padding-left:20px"><li style="margin-bottom:5px"><strong style="color:#3498db">Free For All (FFA):</strong> It's every kart for themselves! Collect weapons from those mysterious boxes and use them to smash opponents. The player with the most kills at the end of the round wins. It's pure, unadulterated kart chaos.</li><li style="margin-bottom:5px"><strong style="color:#3498db">Gem Collector:</strong> Scattered around the arena are gems. Your mission is to collect more gems than your rivals before time runs out. Think of it like a treasure hunt, but with a lot more explosions.</li><li style="margin-bottom:5px"><strong style="color:#3498db">Hat Holder:</strong> One hat to rule them all! Find and hold onto the hat for as long as you can while everyone else tries to take it from you. You can't use weapons while carrying the hat, so it's all about evasion and cunning.</li></ul><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">The Arena of Anarchy: Smash Karts io Game Maps</h2><p style="margin:0 0 15px 0;font-size:16px">Dive into an colorful and chaotic maps, each with its own flair for destruction. These tracks are not just for racing; they're battlefields where every corner hides the potential for either glory or a hilarious wipeout.</p><ul style="margin:0 0 15px 0;padding-left:20px;column-count:2"><li style="margin-bottom:5px">Graveyard</li><li style="margin-bottom:5px">Graveyard CTF</li><li style="margin-bottom:5px">Lava Pit</li><li style="margin-bottom:5px">Lava Pit CTF</li><li style="margin-bottom:5px">Skate Park</li><li style="margin-bottom:5px">Sky Arena Dropzone</li><li style="margin-bottom:5px">Sky Arena Pinball</li><li style="margin-bottom:5px">Sky Arena Showdown</li><li style="margin-bottom:5px">Sky Arena Temples</li><li style="margin-bottom:5px">Sky Arena Tunnels</li><li style="margin-bottom:5px">Slick 'n Slide</li><li style="margin-bottom:5px">Smash Fort</li><li style="margin-bottom:5px">Smash Fort CTF</li><li style="margin-bottom:5px">Smash Island</li><li style="margin-bottom:5px">Snow Shrine</li><li style="margin-bottom:5px">Snowpark</li><li style="margin-bottom:5px">Snowpark CTF</li><li style="margin-bottom:5px">Space Station</li><li style="margin-bottom:5px">Space Stations</li><li style="margin-bottom:5px">Steky's Speedway</li><li style="margin-bottom:5px">The Gravel Pit</li><li style="margin-bottom:5px">The Old Graveyard</li></ul><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">Developer</h2><p style="margin:0 0 15px 0;font-size:16px">Smash Karts io was brought to life by TallTeam, who unleashed this game on March 25, 2020.</p><h2 style="color:#e74c3c;font-size:20px;margin:20px 0 10px 0">More io Games</h2><p style="margin:0 0 15px 0;font-size:16px">If you're into the global io game scene with a side of cartoonish carnage, check out other io games like <a href="https://www.onlinegames.io/snow-war-io/" style="color:#3498db;text-decoration:none">Snow War io</a>, where winter warfare is served with a side of snowballs.</p><p style="margin:0;font-size:16px">So, strap in, rev up, and prepare for a no-holds-barred battle where the only rule is there are no rules. Welcome to Smash Karts, where every race is a riot!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

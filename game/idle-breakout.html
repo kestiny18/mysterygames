@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idle Breakout - Idle | MysteryGames</title>
+  <meta name="description" content="Idle Breakout is a free online clicker game with arcade mechanics. The aim is to break all the bricks in a room. With hundreds of levels, this brick-breaker...">
+  <link rel="canonical" href="https://mysterygames.org/game/idle-breakout.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Idle Breakout - Free Online Game">
+  <meta property="og:description" content="Idle Breakout is a free online clicker game with arcade mechanics. The aim is to break all the bricks in a room. With hundreds of levels, this brick-breaker...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Idle Breakout",
+    "description": "Idle Breakout is a free online clicker game with arcade mechanics. The aim is to break all the bricks in a room. With hundreds of levels, this brick-breaker game provides endless gameplay. Click on th",
+    "image": "https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg",
+    "url": "https://mysterygames.org/game/idle-breakout.html",
+    "genre": "Idle",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Idle" class="hover:text-blue-600">Idle</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Idle Breakout</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://www.onlinegames.io/games/2024/more/idle-breakout/index.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/692/Play-Idle-Breakout.jpg" alt="Idle Breakout" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Idle</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Idle Breakout</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px"><strong style="color:#e74c3c;font-size:18px">Idle Breakout</strong> <span style="font-size:16px">is a free online <a href="https://www.onlinegames.io/t/clicker/" style="color:#3498db;text-decoration:none">clicker game</a> with arcade mechanics. The aim is to break all the bricks in a room. With hundreds of levels, this brick-breaker game provides endless gameplay. Click on the bricks or employ balls. Upgrade balls' power and speed, use lasers, and get all the ribbons! When you pass all the levels, proceed to the next prestige to be an ultimate brickbreaker!</span></p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">How to Play Idle Breakout</h2><ul style="margin:0 0 20px;padding-left:20px"><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Start destroying blocks by clicking on them.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">When you have enough coins, buy a basic ball from the top left.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Upgrade balls, use power-ups and pass as many levels as you can.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">The number on the brick indicates how many times it needs to be hit to break. As you pass more and more levels, you will see much higher numbers on bricks. So you should increase the clicking power, as well.</span></li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Balls</h2><p style="margin:0 0 15px;font-size:15px">In the game, you can acquire balls using your coins. Whenever you get the first ball of each type, a new type of ball unlocks.</p><p style="margin:0 0 15px;font-size:15px">In addition, you can improve your balls' speed range and power. Max them up in the Upgrades section. Learn about the types of balls below.</p><ul style="margin:0 0 20px;padding-left:20px"><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Basic:</strong> <span style="font-size:15px">Very slow and ineffective alone. Upgrade the speed and power of the ball and employ a number of them to get results from the basic ball</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Plasma:</strong> <span style="font-size:15px">Much faster than the basic ball, it will cause splash damage to bricks. You should improve its range.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Sniper:</strong> <span style="font-size:15px">Bounces of Walls towards the nearest brick. Fast and powerful.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Scatter Ball:</strong> <span style="font-size:15px">$10000 to unlock the first one. Creates additional single-hit balls. Very effective in cleaning the rooms.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Cannon Ball:</strong> <span style="font-size:15px">Smashes through bricks and vital after 2nd and 3rd prestige.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Poison Ball:</strong> <span style="font-size:15px">The last ball to unlock. When a poison ball hits a brick, the brick becomes infected and takes double the damage from any other ball.</span></li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Achievements</h2><p style="margin:0 0 15px;font-size:15px">The achievement section will guide you on what to aim for in the game. There are 12 of them that you can acquire.</p><ul style="margin:0 0 20px;padding-left:20px"><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">1 million total damage with basic ball</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">1 million total damage with plasma</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">1 million total damage with sniper</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">1 million total damage with cannonball</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">1 million total damage with poison ball</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Use all power-ups.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Prestige 5 times.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Have 10 of each ball.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Break 1.000 black bricks.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Reach level 250</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Unlock all 4 lasers.</span></li><li style="margin-bottom:8px;list-style-type:disc"><span style="font-size:15px">Break 1 million bricks.</span></li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Power-Ups</h2><p style="margin:0 0 15px;font-size:15px">You have 5 power-ups that you can use throughout the game. Except for the x2 Gold power-up, they all boost the brick-breaking performance for 30 seconds. Access them in the upgrades section as well.</p><ul style="margin:0 0 20px;padding-left:20px"><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Cashed Up:</strong> <span style="font-size:15px">Earn double the money.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Click Frenzy:</strong> <span style="font-size:15px">Clicks spawn scatter balls or do x10 damage.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Demon Core:</strong> <span style="font-size:15px">Deals waves of damage. Very effective and lets you pass a few levels at once.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">Snow Ball:</strong> <span style="font-size:15px">Gains power and speed with every bounce.</span></li><li style="margin-bottom:8px;list-style-type:disc"><strong style="color:#e74c3c">2X Gold:</strong> <span style="font-size:15px">Can only be used on a gold brick</span></li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Save Progress in Idle Breakout</h2><p style="margin:0 0 15px;font-size:15px">You haven't played Idle Breakout for hours, only to lose your progress when you close the tab. Your progress is saved in your browser cache, so you can continue where you left off next time and enjoy some passive income in the game.</p><p style="margin:0 0 15px;font-size:15px">By any chance, if you'd like to save the progress locally and delete your browser history, head over to the settings section and click <strong style="color:#e74c3c">export to back up your progress</strong>. Copy the code given in the pop-up. Import by pasting the same code the next time you enter the game.</p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Controls</h2><p style="margin:0 0 10px;font-size:16px"><strong style="color:#e74c3c">Computers</strong></p><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:5px;list-style-type:disc"><span style="font-size:15px">Left-click on bricks to break</span></li></ul><p style="margin:0 0 10px;font-size:16px"><strong style="color:#e74c3c">Mobile and Tablet</strong></p><ul style="margin:0 0 15px;padding-left:20px"><li style="margin-bottom:5px;list-style-type:disc"><span style="font-size:15px">Tap on bricks to break</span></li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">Developer</h2><p style="margin:0 0 15px;font-size:15px">Kodiqi made Idle Breakout.</p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px;border-bottom:2px solid #e74c3c;padding-bottom:5px">What to Play Next?</h2><p style="margin:0;font-size:15px">Check out our newest release if you enjoy playing idle games like this. <a href="https://www.onlinegames.io/spacebar-clicker/" style="color:#3498db;text-decoration:none">Spacebar Clicker</a> is a game in which you employ boomer moms and booster monkeys to press the spacebar. It's absolutely absurd and a fun way to waste some time while waiting for a meeting to end or a bus to arrive at your stop. We hope you have fun playing the games we offer. If you have any inquiries, do not hesitate to contact us!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

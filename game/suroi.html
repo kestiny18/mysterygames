@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suroi - Survival | MysteryGames</title>
+  <meta name="description" content="In a post-apocalyptic 2D world, you awaken with nothing in your pockets but the will to survive in your heart. Wander around the arena for anything that...">
+  <link rel="canonical" href="https://mysterygames.org/game/suroi.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Suroi - Free Online Game">
+  <meta property="og:description" content="In a post-apocalyptic 2D world, you awaken with nothing in your pockets but the will to survive in your heart. Wander around the arena for anything that...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/817/suroi.io.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Suroi",
+    "description": "In a post-apocalyptic 2D world, you awaken with nothing in your pockets but the will to survive in your heart. Wander around the arena for anything that might help you survive in a place swarming with",
+    "image": "https://www.onlinegames.io/media/posts/817/suroi.io.jpg",
+    "url": "https://mysterygames.org/game/suroi.html",
+    "genre": "Survival",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Survival" class="hover:text-blue-600">Survival</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Suroi</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://suroi.io/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/817/suroi.io.jpg" alt="Suroi" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Survival</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Suroi</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">In a post-apocalyptic 2D world, you awaken with nothing in your pockets but the will to survive in your heart. Wander around the arena for anything that might help you survive in a place swarming with enemies. Found a bottle of cola? Toss it in your backpack. Did you see a vest and helmet? Gear up for protection. Come across an MP40 or a box of grenades? Consider yourself lucky; you're making progress!</p><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;"><strong style="color:#e74c3c;font-weight:700;">Suroi</strong> io is an online multiplayer survival game inspired by Surviv.io. Your mission: gather loot, chests, weapons, medkits, and whatever else you can find to survive in this hostile environment. Explore, avoid enemies, and that toxic orange gas. Collect your essentials and eliminate opponents. Soon, they'll be the ones fleeing from you. Dominate the field and carve your name on the leaderboard.</p><h2 style="color:#e74c3c;font-size:22px;margin:20px 0 15px;border-bottom:2px solid #e74c3c;padding-bottom:5px;">Controls</h2><ul style="list-style-type:none;padding-left:0;margin-bottom:20px;"><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Movement:</strong><span style="color:#333;"> WASD or Arrow Keys</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Aim:</strong><span style="color:#333;"> Mouse</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Attack:</strong><span style="color:#333;"> Left-Click</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Change Weapons:</strong><span style="color:#333;"> 1,2,3 or Mouse Scroll</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Pickup/Interact:</strong><span style="color:#333;"> F</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Reload:</strong><span style="color:#333;"> R</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Use Healing Item:</strong><span style="color:#333;"> Left-Click on the item or 7-0</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Cancel Action:</strong><span style="color:#333;"> X</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Toggle Fullscreen Map:</strong><span style="color:#333;"> G or M</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Toggle Minimap:</strong><span style="color:#333;"> N</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Use Emote Wheel:</strong><span style="color:#333;"> Hold Right-Click, drag, and release</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Team Ping:</strong><span style="color:#333;"> Hold Right-Click and C, drag, and release</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Request Item:</strong><span style="color:#333;"> Hold C and click on the item</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Drop Item:</strong><span style="color:#333;"> Right-click on the item</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Equip Last Item:</strong><span style="color:#333;"> Q</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Swap Gun Slots:</strong><span style="color:#333;"> T</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Equip Other Gun:</strong><span style="color:#333;"> Space</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Change Scope Zoom:</strong><span style="color:#333;"> Left-Click on Scope</span></li></ul><h2 style="color:#e74c3c;font-size:22px;margin:20px 0 15px;border-bottom:2px solid #e74c3c;padding-bottom:5px;">How to Play</h2><ul style="list-style-type:none;padding-left:0;margin-bottom:20px;"><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Suroi </strong>is a battle royale io game where strategic thinking is key to survival.</li><li style="margin-bottom:8px;font-size:15px;">First, collect armor, weapons, medikits, and ammo.</li><li style="margin-bottom:8px;font-size:15px;">To find them, enter abandoned houses, break into closets, or open boxes by left-clicking—press F to equip your findings.</li><li style="margin-bottom:8px;font-size:15px;">Once you're armed enough, defend your team and take down opponents. Dodge enemy attacks and send them to spectator mode to watch how you've got there!</li></ul><h3 style="color:#e74c3c;font-size:18px;margin:15px 0 10px;">Healing Items</h3><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">In duo mode, you can revive your teammate, and they can revive you. In solo mode, you're on your own, so stock up on healing items. Save especially the Medikits for an emergency when you need it. Here's what you need to know to stay in the fight:</p><ul style="list-style-type:none;padding-left:0;margin-bottom:20px;"><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Gauze:</strong><span style="color:#333;"> Restores 15 health</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Medikit:</strong><span style="color:#333;"> Restores 100 health</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Cola:</strong><span style="color:#333;"> Restores 25 adrenaline</span></li><li style="margin-bottom:8px;font-size:15px;"><strong style="color:#e74c3c;font-weight:700;">Tablets:</strong><span style="color:#333;"> Restore 50 adrenaline</span></li></ul><h3 style="color:#e74c3c;font-size:18px;margin:15px 0 10px;">Beware the Orange Gas</h3><ul style="list-style-type:none;padding-left:0;margin-bottom:20px;"><li style="margin-bottom:8px;font-size:15px;">Enemies aren't your only threat. In this post-apocalyptic world, a toxic orange gas spreads across the map, killing anyone who breathes it in. Keep an eye on the map in the top-left corner of your screen. When you see the orange shadow, run.</li><li style="margin-bottom:8px;font-size:15px;">As the game progresses, the gas will cover more of the map, shrinking the safe zone.</li><li style="margin-bottom:8px;font-size:15px;">Now you're ready to survive in Suroi.io! May your health bar stay full, and good luck out there!</li></ul><h2 style="color:#e74c3c;font-size:22px;margin:20px 0 15px;border-bottom:2px solid #e74c3c;padding-bottom:5px;">Developer</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">Hasanger Games created Suroi.io</p><h2 style="color:#e74c3c;font-size:22px;margin:20px 0 15px;border-bottom:2px solid #e74c3c;padding-bottom:5px;">Similar Games</h2><p style="color:#333;font-size:16px;line-height:1.5;margin-bottom:15px;">If you've enjoyed browser-based battle royales like Surviv.io and ZombsRoyale.io, you'll feel right at home here. Keep the adventure alive by playing other <a href="https://www.onlinegames.io/t/battle-royale/" style="color:#3498db;text-decoration:none;">battle royale games</a> on OnlineGames.io! What about forming a squad with pets in <a href="https://www.onlinegames.io/taming-io/" style="color:#3498db;text-decoration:none;">Taming io</a> next?</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

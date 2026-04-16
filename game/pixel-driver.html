@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Driver - Pixel | MysteryGames</title>
+  <meta name="description" content="Sometimes, you just crave something simple. Nothing fancy. No complicated missions or stressful tasks. Just a pixel car, a colorful city, and the freedom to...">
+  <link rel="canonical" href="https://mysterygames.org/game/pixel-driver.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pixel Driver - Free Online Game">
+  <meta property="og:description" content="Sometimes, you just crave something simple. Nothing fancy. No complicated missions or stressful tasks. Just a pixel car, a colorful city, and the freedom to...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/990/Pixel-Driver.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Pixel Driver",
+    "description": "Sometimes, you just crave something simple. Nothing fancy. No complicated missions or stressful tasks. Just a pixel car, a colorful city, and the freedom to roam. That's it. These are exactly what Pix",
+    "image": "https://www.onlinegames.io/media/posts/990/Pixel-Driver.jpg",
+    "url": "https://mysterygames.org/game/pixel-driver.html",
+    "genre": "Pixel",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Pixel" class="hover:text-blue-600">Pixel</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Pixel Driver</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2021/unity3/pixel-driver/index-og.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/990/Pixel-Driver.jpg" alt="Pixel Driver" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Pixel</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Pixel Driver</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;color:#333;line-height:1.5"><p style="margin:0 0 15px 0">Sometimes, you just crave something simple. Nothing fancy. No complicated missions or stressful tasks. Just a pixel car, a colorful city, and the freedom to roam. That's it. These are exactly what <strong style="color:#e74c3c">Pixel Driver</strong> are all about.</p><p style="margin:0 0 15px 0">In Pixel Driver, you'll hop into your pixel-style car and explore a colorful, bustling city made completely out of blocks. The city is lively with pixel police cars, fire trucks, and ambulances driving around, making the streets feel alive and busy.</p><p style="margin:0 0 15px 0">This simple driving game beautifully combines old-school pixel graphics with modern 3D visuals, creating a fun and nostalgic atmosphere. You can race to beat your best time or just cruise to relax like in <a href="https://www.onlinegames.io/slow-roads/" style="color:#3498db;text-decoration:none">Slow Roads</a>. It keeps things easy and enjoyable. So jump in your car, hit the gas, and enjoy the simplicity of driving around in this charming pixel world!</p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px 0">Controls</h2><ul style="margin:0 0 15px 0;padding-left:20px"><li style="margin-bottom:5px;list-style-type:disc">Drive with WASD or Arrow Keys</li><li style="margin-bottom:5px;list-style-type:disc">Use nitro with Shift</li><li style="margin-bottom:5px;list-style-type:disc">Pause or open menu with Escape</li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px 0">Game Modes</h2><p style="margin:0 0 15px 0">In Pixel Driver, you have two fun ways to play:</p><ul style="margin:0 0 15px 0;padding-left:20px"><li style="margin-bottom:5px;list-style-type:disc">Racing Mode: Race around the pixel city as fast as you can. Your goal is to beat your best time! Watch out for other AI-controlled cars roaming around. Use nitro to speed up on straight roads, but slow down for tight corners so you don't crash.</li><li style="margin-bottom:5px;list-style-type:disc">Free Drive Mode: Relax and explore the city without any pressure. Drive anywhere you like, check out cool spots, or practice your driving and drifting skills. You'll still see AI cars on the streets, adding life to your cruising experience.</li></ul><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px 0">Developer</h2><p style="margin:0 0 15px 0">Pixel Driver was created by FreezeNova, famous for fun and easy-to-play online games for players of all ages.</p><h2 style="color:#2c3e50;font-size:20px;margin:20px 0 10px 0">Explore Free Driving Games</h2><p style="margin:0 0 15px 0">If you love driving games, OnlineGames.io is the perfect place to explore. You can find tons of exciting online car games, ranging from realistic driving simulators to fun arcade-style adventures like Pixel Driver. If you're into racing, drifting, performing wild stunts, or simply cruising around open-world maps, OnlineGames.io has you covered. Our <a href="https://www.onlinegames.io/t/driving/" style="color:#3498db;text-decoration:none">free driving games</a> are great for practicing your driving skills, competing with friends, or just chilling out after a long day. So if Pixel Driver has sparked your interest, dive deeper into the world of online driving games and discover your new favorite today! If you need further help, our suggestion is <a href="https://www.onlinegames.io/madalin-stunt-cars-pro/" style="color:#3498db;text-decoration:none">Madalin Stunt Cars 2</a>. You'll get crazy stunts and fast cars. Start playing now!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

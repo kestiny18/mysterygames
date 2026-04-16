@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooftop Duel - Shooting | MysteryGames</title>
+  <meta name="description" content="Can you handle a rooftop shoot-out with gravity, ragdoll limbs, and a toybox of overpowered weapons? The recoil is wild here. Rooftop Duel piles all the...">
+  <link rel="canonical" href="https://mysterygames.org/game/rooftop-duel.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rooftop Duel - Free Online Game">
+  <meta property="og:description" content="Can you handle a rooftop shoot-out with gravity, ragdoll limbs, and a toybox of overpowered weapons? The recoil is wild here. Rooftop Duel piles all the...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Rooftop Duel",
+    "description": "Can you handle a rooftop shoot-out with gravity, ragdoll limbs, and a toybox of overpowered weapons? The recoil is wild here. Rooftop Duel piles all the goofy physics of classic ragdoll games. You'll ",
+    "image": "https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg",
+    "url": "https://mysterygames.org/game/rooftop-duel.html",
+    "genre": "Shooting",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Shooting" class="hover:text-blue-600">Shooting</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Rooftop Duel</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://cloud.onlinegames.io/games/2025/construct/213/rooftop-duel/index-og.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1002/Rooftop-Duel-Online.jpg" alt="Rooftop Duel" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Shooting</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Rooftop Duel</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div style="font-family:Arial,sans-serif;line-height:1.5"><p style="color:#333;margin-bottom:15px">Can you handle a rooftop shoot-out with gravity, ragdoll limbs, and a toybox of overpowered weapons? The recoil is wild here. <strong style="color:#ff5500;font-weight:700">Rooftop Duel</strong> piles all the goofy physics of classic ragdoll games. You'll try to knock off your opponent on a city rooftop. Press play and you hop straight into a duel; There are no downloads, no sign-ups; just jump, aim, and laugh as you and your opponent rocket each other off narrow city rooftops.</p><p style="color:#333;margin-bottom:15px">Grab a friend or fly solo, hit Play, and see how long you can stay on the roof. Just don't blame the game when you're laughing too hard to aim straight!</p><p style="color:#333;margin-bottom:15px">Let's get to the controls and game modes together:</p><h2 style="color:#ff5500;font-size:22px;margin:20px 0 10px">Controls</h2><p style="color:#333;margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Player 1</strong></p><ul style="list-style-type:none;padding-left:0;margin-bottom:15px"><li style="margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">W / Right Mouse : </strong><span style="color:#333">Jump</span></li><li style="margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Hold E / Left Mouse : </strong><span style="color:#333">Aim</span></li><li style="margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Release E / Release Left-Mouse : </strong><span style="color:#333">Shoot</span></li></ul><p style="color:#333;margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Player 2</strong></p><ul style="list-style-type:none;padding-left:0;margin-bottom:15px"><li style="margin-bottom:5px"><span style="color:#333">I : Jump</span></li><li style="margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Hold O :</strong><span style="color:#333"> Aim</span></li><li style="margin-bottom:5px"><strong style="color:#ff5500;font-weight:700">Release O :</strong><span style="color:#333"> Shoot</span></li></ul><h2 style="color:#ff5500;font-size:22px;margin:20px 0 10px">How to Play Rooftop Duel</h2><p style="color:#333;margin-bottom:15px">Once the round loads, both ragdoll fighters try to balance on a rooftop. Tap jump, hold to aim, then let go to shoot. Every shot packs recoil, so a blast can rescue you from the edge or fling you into mid-air.</p><p style="color:#333;margin-bottom:15px">Floaty jumps give you a moment to dodge an incoming bullet, or if you mistime things, you'll sail straight into the abyss. If you stay up while your opponent falls, you win the round, collect coins, and head back to the shop for an even sillier weapon before the next rooftop showdown.</p><h2 style="color:#ff5500;font-size:22px;margin:20px 0 10px">Game Modes</h2><p style="color:#333;margin-bottom:15px">Rooftop Duel has three main game modes that offer different ways to play depending on whether you're playing alone or with a friend.</p><ul style="list-style-type:none;padding-left:0;margin-bottom:15px"><li style="margin-bottom:10px"><strong style="color:#ff5500;font-weight:700">2 Player Mode:</strong><span style="color:#333"> local multiplayer mode where two players share the same keyboard. Each player uses their own set of keys to jump and shoot. First player uses W and E while the second uses I and O keys. The round continues until one player knocks the other off the rooftop. You'll play 5 rounds to complete a match. This mode is only available on devices with a keyboard, so it is best played on a laptop or desktop. If you're using a mobile, try other modes instead.</span></li><li style="margin-bottom:10px"><strong style="color:#ff5500;font-weight:700">Missions Mode: </strong><span style="color:#333">a series of short levels, each with a specific objective. It's a good place to start if you want to get used to the controls, learn how different weapons behave, and see new rooftops each round.</span></li><li style="margin-bottom:10px"><strong style="color:#ff5500;font-weight:700">Survivor Mode: </strong><span style="color:#333">the goal is to stay alive for as long as possible. You'll face a continuous wave of enemies. The difficulty increases the longer you last. This mode requires a bit quicker reactions and good control compared to other modes. It's recommended to unlock more powerful weapons before playing, as basic gear can make it difficult to survive for long.</span></li></ul><h2 style="color:#ff5500;font-size:22px;margin:20px 0 10px">Developer</h2><p style="color:#333;margin-bottom:15px">Rooftop Duel is cooked up by FreezeNova, the studio behind a stack of popular unblocked ragdoll games like <a href="https://www.onlinegames.io/soccer-random-pro/" style="color:#0066cc;text-decoration:none">Soccer Random Pro</a>.</p><h2 style="color:#ff5500;font-size:22px;margin:20px 0 10px">More Gun Games Online</h2><p style="color:#333;margin-bottom:15px">If you're hooked on floppy firefights, try <a href="https://www.onlinegames.io/total-recoil/" style="color:#0066cc;text-decoration:none">Total Recoil</a> next. In this game, you're a soldier fighting off waves of angry robots in a factory. Each time you shoot, recoil makes you bounce in the opposite direction. Survive 30 challenging levels, dodge falling rockets, and collect coins to unlock new characters. <a href="https://www.onlinegames.io/t/gun/" style="color:#0066cc;text-decoration:none">All gun games</a> on OnlineGames.io are free and playable right in your browser perfect for quick, commitment free sessions. Give it a try if you're up for another chaotic shooter!</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

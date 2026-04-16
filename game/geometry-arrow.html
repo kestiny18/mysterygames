@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Arrow - Avoid | MysteryGames</title>
+  <meta name="description" content="When you hit start, you don't just fire the arrow; you become itself. Race through a dark, hidden tunnel in Geometry Arrow. It's a super sleek,...">
+  <link rel="canonical" href="https://mysterygames.org/game/geometry-arrow.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Geometry Arrow - Free Online Game">
+  <meta property="og:description" content="When you hit start, you don't just fire the arrow; you become itself. Race through a dark, hidden tunnel in Geometry Arrow. It's a super sleek,...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1005/Geometry-Arrow.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Geometry Arrow",
+    "description": "When you hit start, you don't just fire the arrow; you become itself. Race through a dark, hidden tunnel in Geometry Arrow. It's a super sleek, rhythm-driven platformer game like Geometry Dash online ",
+    "image": "https://www.onlinegames.io/media/posts/1005/Geometry-Arrow.jpg",
+    "url": "https://mysterygames.org/game/geometry-arrow.html",
+    "genre": "Avoid",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Avoid" class="hover:text-blue-600">Avoid</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Geometry Arrow</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/9ee26ba4405c456094c70af7dc31a524/?gd_sdk_referrer_url=https://www.onlinegames.io/geometry-arrow/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1005/Geometry-Arrow.jpg" alt="Geometry Arrow" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Avoid</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Geometry Arrow</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><p style="color:#333;font-family:Arial,sans-serif;font-size:16px;line-height:1.5">When you hit start, you don't just fire the arrow; you become itself. Race through a dark, hidden tunnel in <strong style="color:#ff6600">Geometry Arrow</strong>. It's a super sleek, rhythm-driven platformer game like <a href="https://www.onlinegames.io/geometry-dash-freezenova/" style="color:#0066cc;text-decoration:none">Geometry Dash online</a> that puts your reflexes to the test. You guide a simple white arrow through a maze of sharp angles and spikes. You'll be rising and falling with a single tap. Across 12 difficult levels plus a hidden bonus stage, each set to its own upbeat music, you'll race against geometry itself. With clean, minimal graphics and instantly graspable controls, Geometry Arrow is a free browser game you can play online whenever you need a quick thrill on the go. Just a friendly reminder: take a breather when the rage becomes too intense. Trust me, you'll need it.</p><h2 style="color:#222;font-family:Arial,sans-serif;font-size:20px;margin-top:20px">Controls</h2><ul style="color:#333;font-family:Arial,sans-serif;font-size:16px;padding-left:20px"><li style="margin-bottom:8px"><strong style="color:#ff6600">PC:</strong> Left mouse button or Spacebar: hold to ascend, release to descend</li><li style="margin-bottom:8px"><strong style="color:#ff6600">Mobile:</strong> Touch anywhere on the screen: press to lift, let go to drop</li></ul><h2 style="color:#222;font-family:Arial,sans-serif;font-size:20px;margin-top:20px">How to Play Geometry Arrow</h2><ul style="color:#333;font-family:Arial,sans-serif;font-size:16px;padding-left:20px"><li style="margin-bottom:8px">From the moment your arrow appears at the left edge, it's all about timing. Press and hold (or tap and hold) to gently rise. Release when you need to fall.</li><li style="margin-bottom:8px">Early levels ease you in, introducing one hazard at a time, like simple spikes, sawblades, and split ramps.</li><li style="margin-bottom:8px">You'll learn that a quick tap clears a small spike while a longer hold soars over tall spikes.</li><li style="margin-bottom:8px">Pay attention to the beat: each level's music isn't just background noise. A rising drumroll often hints at a tall barrier ahead, and a sudden bass drop might mean you need to let go and dive under a low overhang.</li><li style="margin-bottom:8px">As you progress, obstacles compound. You'll navigate narrow corridors of spikes by tapping so fast your arrow darts in rapid zig-zags to slip past.</li><li style="margin-bottom:8px">You'll see your progress in the bar at the top. Don't trust if you're near the end because of one little mistake, and you're back at the beginning. No checkpoints.</li></ul><h2 style="color:#222;font-family:Arial,sans-serif;font-size:20px;margin-top:20px">Developer</h2><p style="color:#333;font-family:Arial,sans-serif;font-size:16px;line-height:1.5">Geometry Arrow is distributed by Playgama. It's perfect for fans of quick-play Geometry Dash games.</p><h2 style="color:#222;font-family:Arial,sans-serif;font-size:20px;margin-top:20px">Similar Games</h2><p style="color:#333;font-family:Arial,sans-serif;font-size:16px;line-height:1.5">If you love the minimalist challenge and rhythm-based jumps in Geometry Arrow, give <a href="https://www.onlinegames.io/space-waves/" style="color:#0066cc;text-decoration:none">Space Waves</a> a try. In Space Waves, you guide a glowing orb through neon tunnels, timing your moves to electronic beats as obstacles surge and recede. It shares the same one-tap control scheme and pulse-pounding soundtrack but with more colorful visuals.</p></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>

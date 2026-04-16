@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunnel Road - Avoid | MysteryGames</title>
+  <meta name="description" content="Tunnel Road is a 3D avoid game where you navigate in a sci-fi, spinning tunnel full of twists, turns, and sudden obstacles. It's all about surviving as long...">
+  <link rel="canonical" href="https://mysterygames.org/game/tunnel-road.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tunnel Road - Free Online Game">
+  <meta property="og:description" content="Tunnel Road is a 3D avoid game where you navigate in a sci-fi, spinning tunnel full of twists, turns, and sudden obstacles. It's all about surviving as long...">
+  <meta property="og:image" content="https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Game schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "Tunnel Road",
+    "description": "Tunnel Road is a 3D avoid game where you navigate in a sci-fi, spinning tunnel full of twists, turns, and sudden obstacles. It's all about surviving as long as you can. The game starts off manageable.",
+    "image": "https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg",
+    "url": "https://mysterygames.org/game/tunnel-road.html",
+    "genre": "Avoid",
+    "operatingSystem": "Web Browser",
+    "playMode": "SinglePlayer",
+    "author": {
+      "@type": "Organization",
+      "name": "MysteryGames"
+    }
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3ZYC0SSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YV3ZYC0SSR');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279632472379634" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    header { transition: transform 0.3s ease-in-out; }
+    #game-container {
+      position: relative;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    #game-container.fullscreen-mode {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container.fullscreen-mode iframe {
+      width: 100vw;
+      height: 100vh;
+      max-height: none;
+    }
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 640px) {
+      .nav-text { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+      <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <a href="/" class="header-title text-3xl font-bold text-gray-800 hover:text-blue-600 transition">MysteryGames</a>
+          <span class="nav-text ml-4 text-lg text-gray-600">A new game surprise every time!</span>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition relative group">Browse</a>
+          <a href="/#surprise" class="text-gray-800 hover:text-blue-600 transition relative group">Surprise Me</a>
+        </nav>
+      </div>
+    </header>
+
+  <main class="container mx-auto mt-24 p-4">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/?category=Avoid" class="hover:text-blue-600">Avoid</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Tunnel Road</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Game area -->
+      <div class="lg:col-span-2">
+        <div id="game-container" class="relative">
+          <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+          <iframe id="game-iframe" class="w-full border rounded-xl" style="height: 600px" src="https://html5.gamedistribution.com/14e87fab0cbf44b6b3e57ddb77af5941/?gd_sdk_referrer_url=https://www.onlinegames.io/tunnel-road/" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ad below game -->
+        <div class="mt-4">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <img src="https://www.onlinegames.io/media/posts/1008/Tunnel-Road.jpg" alt="Tunnel Road" class="w-full rounded-lg mb-4">
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Avoid</span>
+          <h1 class="text-2xl font-bold mt-3 text-gray-900">Tunnel Road</h1>
+          <a href="/" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">Surprise Me!</a>
+        </div>
+
+        <!-- Game description -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h2 class="font-bold text-gray-900 mb-3">About This Game</h2>
+          <div class="text-gray-600 text-sm leading-relaxed prose"><div><p style="margin:0;padding:0;font-family:Arial,sans-serif;color:#333;"><strong style="color:#ff6600;font-size:18px;">Tunnel Road</strong> <span style="font-size:14px;">is a 3D avoid game where you navigate in a sci-fi, spinning tunnel full of twists, turns, and sudden obstacles. It's all about surviving as long as you can. The game starts off manageable. But, as the tempo picks up, so does the pressure. If you hit an obstacle, you're back at level 1... unless you choose to use one of your limited revivals. It's a kind of game that pulls you in and doesn't let go.</span></p><p style="margin:10px 0 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">Since the early days of browser arcades, tunnel games have been around with us. They take inspiration from classic <a href="https://www.onlinegames.io/t/running/" style="color:#0066cc;text-decoration:none;">endless runners</a> and even some retro sci-fi games where you fly through wormholes. But Tunnel Road takes that concept and gives it a slick, colorful makeover with smooth controls, randomized levels and competitive 2-player support. So, it is a pure test of your reflexes wrapped up in a brand new package. Smoother than ever before. Let's start our journey in the wormhole!</p><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#333;font-size:16px;">Controls</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;"><strong>1-Player Mode:</strong></p><ul style="margin:5px 0;padding-left:20px;font-family:Arial,sans-serif;color:#333;font-size:14px;"><li style="margin:3px 0;"><strong>Move left: </strong>Press A or Left Arrow</li><li style="margin:3px 0;"><strong>Move right: </strong>Press D or Right Arrow</li></ul><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;"><strong>2-Player Mode:</strong></p><ul style="margin:5px 0;padding-left:20px;font-family:Arial,sans-serif;color:#333;font-size:14px;"><li style="margin:3px 0;"><strong>Player 1:</strong> A / D</li><li style="margin:3px 0;"><strong>Player 2: </strong>Left / Right Arrows</li></ul><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#333;font-size:16px;">How to Play Tunnel Road</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">Start by choosing whether you want to play alone or against a friend. Once you're in, your only goal is simple: stay alive. Your ball speeds forward through a swirling tunnel filled with unexpected blockades and gaps. You must steer left or right to dodge everything in your path.</p><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">Each time you complete a run, you progress to a new level, but hit just one obstacle and you're forced to restart from level 1. That is unless you opt to revive with an ad and keep your streak going.</p><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">The real challenge is keeping up with the speed. It increases little by little, pushing your limits. No power-ups, no invincibility, no brakes and definitely no slow motion. It's just you, your reflexes and the tunnel ahead...</p><h3 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#333;font-size:15px;">Explore Tunnel Road With a Friend</h3><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">Tunnel Road gets even more exciting when you bring in a second player. In 2-player mode, both players race through the same tunnel side by side. The goal is to stay alive longer than your opponent. You and your friend will each control a separate ball on your half of the screen, dodging obstacles in parallel tunnels. If one player crashes, the other player instantly wins the round. To start the game, select 2-Player Mode from the main menu. The screen will split vertically Player 1 plays on the left, Player 2 on the right. Player 1 uses A (left) and D (right). First one to crash loses the round!</p><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#333;font-size:16px;">Developer</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">Tunnel Road was developed by gamevgames. The game's design blends traditional endless tunnel racing with modern arcade polish. It runs smoothly in your browser.</p><h2 style="margin:15px 0 5px;padding:0;font-family:Arial,sans-serif;color:#333;font-size:16px;">Other Skill Games to Play Online</h2><p style="margin:5px 0;padding:0;font-family:Arial,sans-serif;color:#333;font-size:14px;">If Tunnel Road keeps you on the edge of your seat, try Extreme Run 3D next. It's another high-speed "avoid-obstacles" challenge with flashy visuals and faster curves. Both games will test your reflexes, but <a href="https://www.onlinegames.io/extreme-run-3d/" style="color:#0066cc;text-decoration:none;">Extreme Run 3D</a> leans even harder into intensity, speed and variety of dynamic obstacles like spikes and wrecking balls. Great for fans who want to push the limits of their gaming skills.</p></div></div>
+        </div>
+
+        <!-- Ad in sidebar -->
+        <ins class="adsbygoogle" style="display:block; width:100%; height:250px" data-ad-client="ca-pub-2279632472379634" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white mt-12 py-6 border-t border-gray-100">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 MysteryGames.org. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll behavior
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    function updateHeader() {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      const container = document.getElementById('game-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen && container.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', () => {
+      const container = document.getElementById('game-container');
+      const fullscreenBtn = document.getElementById('fullscreen-btn');
+      if (document.fullscreenElement) {
+        container.classList.add('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Exit Fullscreen';
+      } else {
+        container.classList.remove('fullscreen-mode');
+        fullscreenBtn.innerHTML = 'Fullscreen';
+      }
+    });
+
+    // Load ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
